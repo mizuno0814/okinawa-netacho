@@ -146,7 +146,7 @@
   var shareX = document.getElementById("share-x");
   if (shareX) {
     var params = new URLSearchParams({
-      text: "沖縄の暮らしを、ちょっとお得に、もっと楽しく。うちなーくらし便り",
+      text: "沖縄の暮らしを、ちょっとお得に、もっと楽しく。沖縄ネタ帳",
       url: location.origin + location.pathname
     });
     shareX.href = "https://twitter.com/intent/tweet?" + params.toString();
