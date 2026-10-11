@@ -11,7 +11,7 @@
 
 ## 公開URL
 
-https://ravinala-oka.github.io/okinawa-netacho/
+https://mizuno0814.github.io/okinawa-netacho/
 
 `index.html`、記事ページ、`robots.txt`、`sitemap.xml` には、この公開URLを設定済みです。
 

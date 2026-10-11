@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ravinala-oka.github.io/okinawa-netacho/sitemap.xml
+Sitemap: https://mizuno0814.github.io/okinawa-netacho/sitemap.xml
