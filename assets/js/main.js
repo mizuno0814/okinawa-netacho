@@ -1,7 +1,7 @@
 (function () {
   // 記事カードの地域絞り込み
   var chips = document.querySelectorAll(".chip[data-area]");
-  var posts = document.querySelectorAll(".post");
+  var posts = document.querySelectorAll("#new .post");
   var empty = document.querySelector(".filter-empty");
 
   function applyArea(area) {
@@ -115,7 +115,7 @@
     if (!result) {
       result = document.createElement("p");
       result.className = "search-result";
-      var list = document.querySelector(".posts");
+      var list = document.querySelector("#new .posts");
       list.parentNode.insertBefore(result, list);
     }
     result.textContent = "「" + q + "」の記事：" + shown + "件";
