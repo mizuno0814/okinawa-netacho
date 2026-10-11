@@ -47,6 +47,28 @@
     link.addEventListener("click", function () { applyArea(link.getAttribute("data-area")); });
   });
 
+  // 支援：地域で絞り込む（支援→地域、地域カード→支援 の両方から使う）
+  var supportChips = document.querySelectorAll(".chip[data-support]");
+  var supportPosts = document.querySelectorAll(".support-post");
+  function applySupport(area) {
+    supportChips.forEach(function (c) {
+      var active = c.getAttribute("data-support") === area;
+      c.classList.toggle("is-active", active);
+      c.setAttribute("aria-pressed", String(active));
+    });
+    supportPosts.forEach(function (post) {
+      var areas = (post.getAttribute("data-support-areas") || "").split(" ");
+      post.hidden = !(area === "all" || areas.indexOf(area) !== -1);
+    });
+  }
+  supportChips.forEach(function (chip) {
+    chip.addEventListener("click", function () { applySupport(chip.getAttribute("data-support")); });
+  });
+  document.querySelectorAll("a[data-support]").forEach(function (link) {
+    link.addEventListener("click", function () { applySupport(link.getAttribute("data-support")); });
+  });
+  if (params0.get("support")) applySupport(params0.get("support"));
+
   // 探す・メニューのパネル
   var openers = document.querySelectorAll("[data-open]");
   var lastOpener = null;

@@ -48,6 +48,7 @@
         <li><a href="#new" data-area="all">新着</a></li>
         <li><a href="#feature">特集</a></li>
         <li><a href="#popular">人気</a></li>
+        <li><a href="#support" data-support="all">支援</a></li>
         <li><a href="#new" data-genre="cafe">カフェ</a></li>
         <li><a href="#new" data-area="naha">那覇</a></li>
         <li><a href="#new" data-area="north">北部</a></li>
@@ -82,6 +83,7 @@
         <li><a href="#new" data-area="all">新着記事</a></li>
         <li><a href="#feature">特集</a></li>
         <li><a href="#popular">人気の記事</a></li>
+        <li><a href="#support" data-support="all">支援制度</a></li>
         <li><a href="#area">地域から探す</a></li>
         <li><a href="#links">暮らしのお役立ちリンク</a></li>
         <li><a href="#weather">台風・大雨のとき</a></li>
@@ -150,6 +152,41 @@
         </div>
 
         <ul class="posts">
+          <li class="post" data-areas="naha" data-genres="support">
+            <a class="post-link" href="articles/support-naha-2026-10.html">
+              <div class="post-img post-img--support" aria-hidden="true"><span>支援</span><small>那覇</small><span class="badge badge--new">NEW</span></div>
+              <h3>いま申し込める・使える那覇市の支援制度（2026年10月版）｜就学援助・高齢者の予防接種</h3>
+              <p class="meta"><span class="pin">那覇</span><span>2026.10.12</span></p>
+            </a>
+          </li>
+          <li class="post" data-areas="north" data-genres="support">
+            <a class="post-link" href="articles/support-north-2026-10.html">
+              <div class="post-img post-img--support" aria-hidden="true"><span>支援</span><small>北部</small><span class="badge badge--new">NEW</span></div>
+              <h3>いま申し込める・使える北部の支援制度（2026年10月版）｜移住支援金・肺炎球菌ワクチン自己負担なし</h3>
+              <p class="meta"><span class="pin">北部</span><span>2026.10.12</span></p>
+            </a>
+          </li>
+          <li class="post" data-areas="central" data-genres="support">
+            <a class="post-link" href="articles/support-central-2026-10.html">
+              <div class="post-img post-img--support" aria-hidden="true"><span>支援</span><small>中部</small><span class="badge badge--new">NEW</span></div>
+              <h3>いま申し込める・使える中部の支援制度（2026年10月版）｜保育無償化の上限アップ・就学援助</h3>
+              <p class="meta"><span class="pin">中部</span><span>2026.10.12</span></p>
+            </a>
+          </li>
+          <li class="post" data-areas="south" data-genres="support">
+            <a class="post-link" href="articles/support-south-2026-10.html">
+              <div class="post-img post-img--support" aria-hidden="true"><span>支援</span><small>南部</small><span class="badge badge--new">NEW</span></div>
+              <h3>いま申し込める・使える南部の支援制度（2026年10月版）｜住宅リフォーム補助・予防接種</h3>
+              <p class="meta"><span class="pin">南部</span><span>2026.10.12</span></p>
+            </a>
+          </li>
+          <li class="post" data-areas="miyako yaeyama" data-genres="support">
+            <a class="post-link" href="articles/support-islands-2026-10.html">
+              <div class="post-img post-img--support" aria-hidden="true"><span>支援</span><small>宮古・八重山</small><span class="badge badge--new">NEW</span></div>
+              <h3>いま申し込める・使える宮古・八重山の支援制度（2026年10月版）｜赤ちゃんクーポン・移住支援金</h3>
+              <p class="meta"><span class="pin">宮古・八重山</span><span>2026.10.12</span></p>
+            </a>
+          </li>
           <li class="post" data-areas="naha" data-genres="odekake">
             <a class="post-link" href="articles/naha-shurijo-guide.html">
               <div class="post-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Naha_Shuri_Castle02s5s3200.jpg/960px-Naha_Shuri_Castle02s5s3200.jpg" alt="" loading="lazy" width="960" height="640"><span class="badge badge--new">NEW</span></div>
@@ -187,6 +224,69 @@
           </li>
         </ul>
         <p class="filter-empty" hidden>この条件の記事は準備中です。</p>
+      </div>
+    </section>
+
+    <!-- 支援 -->
+    <section id="support" class="section section--support">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-en">Support</p>
+          <h2>支援</h2>
+          <p class="section-lead">市町村の支援制度（子育て・住まい・健康・移住など）を、地域ごとにまとめています。地域を選ぶと、その地域の記事だけが表示されます。毎月見直します。</p>
+        </div>
+        <div class="filter" role="group" aria-label="支援制度を地域で絞り込む">
+          <button type="button" class="chip is-active" data-support="all" aria-pressed="true">すべて</button>
+          <button type="button" class="chip" data-support="naha" aria-pressed="false">那覇</button>
+          <button type="button" class="chip" data-support="north" aria-pressed="false">北部</button>
+          <button type="button" class="chip" data-support="central" aria-pressed="false">中部</button>
+          <button type="button" class="chip" data-support="south" aria-pressed="false">南部</button>
+          <button type="button" class="chip" data-support="islands" aria-pressed="false">宮古・八重山</button>
+        </div>
+        <ul class="support-list">
+          <li class="support-post" data-support-areas="naha">
+            <a href="articles/support-naha-2026-10.html">
+              <span class="support-area">那覇</span>
+              <span class="support-title">いま申し込める・使える那覇市の支援制度（2026年10月版）</span>
+              <span class="support-tags">就学援助（12/28まで）・高齢者の予防接種</span>
+            </a>
+          </li>
+          <li class="support-post" data-support-areas="north">
+            <a href="articles/support-north-2026-10.html">
+              <span class="support-area">北部</span>
+              <span class="support-title">いま申し込める・使える北部の支援制度（2026年10月版）</span>
+              <span class="support-tags">移住支援金（本部町・国頭村・東村・伊江村）・名護市の肺炎球菌ワクチン自己負担なし</span>
+            </a>
+          </li>
+          <li class="support-post" data-support-areas="central">
+            <a href="articles/support-central-2026-10.html">
+              <span class="support-area">中部</span>
+              <span class="support-title">いま申し込める・使える中部の支援制度（2026年10月版）</span>
+              <span class="support-tags">沖縄市の保育無償化の上限アップ・宜野湾市の就学援助（12/21まで）・予防接種</span>
+            </a>
+          </li>
+          <li class="support-post" data-support-areas="south">
+            <a href="articles/support-south-2026-10.html">
+              <span class="support-area">南部</span>
+              <span class="support-title">いま申し込める・使える南部の支援制度（2026年10月版）</span>
+              <span class="support-tags">八重瀬町の住宅リフォーム補助（最大20万円）・南城市の予防接種</span>
+            </a>
+          </li>
+          <li class="support-post" data-support-areas="islands">
+            <a href="articles/support-islands-2026-10.html">
+              <span class="support-area">宮古・八重山</span>
+              <span class="support-title">いま申し込める・使える宮古・八重山の支援制度（2026年10月版）</span>
+              <span class="support-tags">石垣市の赤ちゃんクーポン24,000円分・中学生のメガネ代補助・移住支援金</span>
+            </a>
+          </li>
+          <li class="support-post" data-support-areas="islands">
+            <a href="articles/miyakojima-cashless.html">
+              <span class="support-area">宮古</span>
+              <span class="support-title">宮古島で支払いの最大25%が戻ってくる！キャッシュレス還元（12/31まで）</span>
+              <span class="support-tags">宮古島市のキャッシュレス還元キャンペーン</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -272,7 +372,7 @@
               <li><a href="https://www.vill.iheya.okinawa.jp/" target="_blank" rel="noopener">伊平屋村</a></li>
               <li><a href="https://www.vill.izena.okinawa.jp/" target="_blank" rel="noopener">伊是名村</a></li>
             </ul>
-              <a class="region-more" href="#new" data-area="north">北部の記事を見る</a>
+              <p class="region-links"><a class="region-more" href="#new" data-area="north">北部の記事を見る</a><a class="region-more region-more--support" href="#support" data-support="north">北部の支援制度</a></p>
             </div>
           </article>
           <article class="region" id="area-central">
@@ -291,7 +391,7 @@
               <li><a href="https://www.vill.nakagusuku.okinawa.jp/" target="_blank" rel="noopener">中城村</a></li>
               <li><a href="https://www.town.nishihara.okinawa.jp/" target="_blank" rel="noopener">西原町</a></li>
             </ul>
-              <a class="region-more" href="#new" data-area="central">中部の記事を見る</a>
+              <p class="region-links"><a class="region-more" href="#new" data-area="central">中部の記事を見る</a><a class="region-more region-more--support" href="#support" data-support="central">中部の支援制度</a></p>
             </div>
           </article>
           <article class="region" id="area-south">
@@ -319,7 +419,7 @@
               <li><a href="https://www.vill.minamidaito.okinawa.jp/" target="_blank" rel="noopener">南大東村</a></li>
               <li><a href="https://vill.kitadaito.okinawa.jp/" target="_blank" rel="noopener">北大東村</a></li>
             </ul>
-              <a class="region-more" href="#new" data-area="south">南部の記事を見る</a>
+              <p class="region-links"><a class="region-more" href="#new" data-area="south">南部の記事を見る</a><a class="region-more region-more--support" href="#support" data-support="south">南部の支援制度</a><a class="region-more region-more--support" href="#support" data-support="naha">那覇の支援制度</a></p>
             </div>
           </article>
           <article class="region" id="area-miyako">
@@ -331,7 +431,7 @@
               <li><a href="https://www.city.miyakojima.lg.jp/" target="_blank" rel="noopener">宮古島市</a></li>
               <li><a href="https://www.vill.tarama.okinawa.jp/" target="_blank" rel="noopener">多良間村</a></li>
             </ul>
-              <a class="region-more" href="#new" data-area="miyako">宮古の記事を見る</a>
+              <p class="region-links"><a class="region-more" href="#new" data-area="miyako">宮古の記事を見る</a><a class="region-more region-more--support" href="#support" data-support="islands">宮古の支援制度</a></p>
             </div>
           </article>
           <article class="region" id="area-yaeyama">
@@ -344,7 +444,7 @@
               <li><a href="https://www.town.taketomi.lg.jp/" target="_blank" rel="noopener">竹富町</a></li>
               <li><a href="https://www.town.yonaguni.okinawa.jp/" target="_blank" rel="noopener">与那国町</a></li>
             </ul>
-              <a class="region-more" href="#new" data-area="yaeyama">八重山の記事を見る</a>
+              <p class="region-links"><a class="region-more" href="#new" data-area="yaeyama">八重山の記事を見る</a><a class="region-more region-more--support" href="#support" data-support="islands">八重山の支援制度</a></p>
             </div>
           </article>
         </div>
