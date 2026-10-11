@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>運営者情報・お問い合わせ｜うちなーくらし便り</title>
+  <meta name="description" content="うちなーくらし便りの運営者情報、記事のつくり方、お問い合わせ、免責事項。">
+  <meta name="theme-color" content="#0a7ea4">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=8">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="./" aria-label="うちなーくらし便り トップへ">
+        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="var(--sea)"/><circle cx="27" cy="13" r="5" fill="var(--sun)"/><path d="M4 25c4-3 8-3 12 0s8 3 12 0 6-3 8-1v6a16 16 0 0 1-32 0z" fill="#fff" opacity=".9"/></svg>
+        <span class="logo-text">うちなーくらし便り<small>沖縄の暮らし情報</small></span>
+      </a>
+      <div class="header-icons">
+        <button type="button" class="icon-button" data-open="search-panel" aria-controls="search-panel" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>探す</span></button>
+        <a class="icon-button" href="about.html#team"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 20.5c1.2-3.8 4.2-5.5 7.5-5.5s6.3 1.7 7.5 5.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>プロフィール</span></a>
+        <button type="button" class="icon-button" data-open="menu-panel" aria-controls="menu-panel" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>メニュー</span></button>
+      </div>
+    </div>
+    <nav class="tabs" aria-label="地域">
+      <ul class="tabs-inner">
+        <li><a href="index.html?area=all#new" data-area="all">新着</a></li>
+        <li><a href="index.html#feature">特集</a></li>
+        <li><a href="index.html#popular">人気</a></li>
+        <li><a href="index.html?genre=cafe#new" data-genre="cafe">カフェ</a></li>
+        <li><a href="index.html?area=naha#new" data-area="naha">那覇</a></li>
+        <li><a href="index.html?area=north#new" data-area="north">北部</a></li>
+        <li><a href="index.html?area=central#new" data-area="central">中部</a></li>
+        <li><a href="index.html?area=south#new" data-area="south">南部</a></li>
+        <li><a href="index.html#area">市町村から探す</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="panel" id="search-panel" hidden>
+    <div class="panel-inner container" role="dialog" aria-modal="true" aria-label="記事を探す">
+      <form class="search-form" action="index.html" method="get">
+        <label class="visually-hidden" for="search-input">キーワード</label>
+        <input id="search-input" class="search-input" type="search" name="q" placeholder="キーワードで探す（例：沖縄そば、北谷）" autocomplete="off">
+        <button type="submit" class="button button-primary">探す</button>
+      </form>
+      <p class="panel-label">地域から探す</p>
+      <ul class="panel-chips">
+        <li><a href="index.html?area=naha#new" data-area="naha">那覇</a></li>
+        <li><a href="index.html?area=north#new" data-area="north">北部</a></li>
+        <li><a href="index.html?area=central#new" data-area="central">中部</a></li>
+        <li><a href="index.html?area=south#new" data-area="south">南部</a></li>
+      </ul>
+      <button type="button" class="panel-close" data-close>閉じる</button>
+    </div>
+  </div>
+
+  <div class="panel panel--menu" id="menu-panel" hidden>
+    <nav class="panel-inner container" aria-label="メニュー">
+      <ul class="menu-list">
+        <li><a href="index.html?area=all#new" data-area="all">新着記事</a></li>
+        <li><a href="index.html#feature">特集</a></li>
+        <li><a href="index.html#popular">人気の記事</a></li>
+        <li><a href="index.html#area">地域から探す</a></li>
+        <li><a href="index.html#links">暮らしのお役立ちリンク</a></li>
+        <li><a href="index.html#weather">台風・大雨のとき</a></li>
+        <li><a href="about.html">運営者情報・お問い合わせ</a></li>
+        <li><a href="privacy.html">プライバシーポリシー</a></li>
+      </ul>
+      <button type="button" class="panel-close" data-close>閉じる</button>
+    </nav>
+  </div>
+  <main class="page">
+    <div class="container">
+      <h1>運営者情報・お問い合わせ</h1>
+
+      <h2>サイト名</h2>
+      <p>うちなーくらし便り</p>
+
+      <h2>このサイトの目的</h2>
+      <p>沖縄に住む人の暮らしが少し便利に、少し楽しくなる情報をお届けします。お得な制度、地元で愛されるお店、おでかけ先、沖縄ならではの文化などを、出典と確認日をつけて紹介します。県外の沖縄好きの方にも楽しんでいただける記事もつくります。</p>
+
+      <h2>記事のつくり方</h2>
+      <p>このサイトの記事は、編集部が公式の情報をもとに調べて書いています。書いた担当とは別の担当が、出典と事実、サイトの方針に合っているかを確認してから公開します。</p>
+      <ul>
+        <li>公式サイトや自治体の広報など、一次情報を出典にします。</li>
+        <li>日付・料金・営業時間などには「〇年〇月時点」と確認した日を書きます。</li>
+        <li>確認できなかったことは書きません。</li>
+      </ul>
+
+      <h2 id="team">編集部</h2>
+      <p>担当ごとに得意分野を持つ編集部で、記事をつくっています。</p>
+      <ul class="team">
+        <li class="member"><p class="member-role">編集長</p><p class="member-hobby">旧暦の行事と季節の話題、沖縄そばの地域ごとの違い</p></li>
+        <li class="member"><p class="member-role">リサーチ担当</p><p class="member-hobby">41市町村の広報誌や公式サイトからの情報集め、バスとゆいレールでの行き方</p></li>
+        <li class="member"><p class="member-role">ライター</p><p class="member-hobby">うちなーぐち（沖縄のことば）を、県外の人にも伝わる説明つきで書くこと</p></li>
+        <li class="member"><p class="member-role">チェック担当</p><p class="member-hobby">情報の新しさの確認、地名の読み方や由来の確認</p></li>
+        <li class="member"><p class="member-role">サイト担当</p><p class="member-hobby">検索で見つけてもらいやすく、スマホで読みやすいページづくり</p></li>
+        <li class="member"><p class="member-role">SNS担当</p><p class="member-hobby">夕日スポットや沖縄のぜんざいなど、写真映えする話題</p></li>
+      </ul>
+
+      <h2>お問い合わせ</h2>
+      <!-- 公開前にオーナーが連絡先（お問い合わせフォームのURLまたはメールアドレス）を入れる -->
+      <p>お問い合わせ先は準備中です。</p>
+      <p>記事の誤りに気づいたときや、掲載している情報が変わったときは、お知らせいただけると助かります。確認のうえ、記事を訂正します。</p>
+
+      <h2 id="disclaimer">免責事項</h2>
+      <ul>
+        <li>掲載している情報は、各記事に書いた確認日時点の内容です。制度、料金、営業時間などは変わることがあります。お出かけや申し込みの前に、公式の情報もご確認ください。</li>
+        <li>情報の正確さには注意していますが、内容を保証するものではありません。このサイトの情報を利用して生じたことについて、責任を負いかねます。</li>
+        <li>リンク先のサイトの内容は、それぞれの運営者が管理しています。</li>
+        <li>誤りが見つかった記事は、訂正した内容と日付を記事内に書いて直します。</li>
+      </ul>
+
+      <p class="updated">2026年10月11日 制定</p>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-logo">うちなーくらし便り</p>
+      <nav class="footer-nav" aria-label="サイト情報">
+        <ul>
+          <li><a href="./">トップ</a></li>
+          <li><a href="about.html">運営者情報・お問い合わせ</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="about.html#disclaimer">免責事項</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">&copy; 2026 うちなーくらし便り</p>
+    </div>
+  </footer>
+  <script src="assets/js/main.js?v=8"></script>
+</body>
+</html>

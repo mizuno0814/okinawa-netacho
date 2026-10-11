@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>プライバシーポリシー｜うちなーくらし便り</title>
+  <meta name="description" content="うちなーくらし便りのプライバシーポリシー。">
+  <meta name="theme-color" content="#0a7ea4">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=8">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="./" aria-label="うちなーくらし便り トップへ">
+        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="var(--sea)"/><circle cx="27" cy="13" r="5" fill="var(--sun)"/><path d="M4 25c4-3 8-3 12 0s8 3 12 0 6-3 8-1v6a16 16 0 0 1-32 0z" fill="#fff" opacity=".9"/></svg>
+        <span class="logo-text">うちなーくらし便り<small>沖縄の暮らし情報</small></span>
+      </a>
+      <div class="header-icons">
+        <button type="button" class="icon-button" data-open="search-panel" aria-controls="search-panel" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>探す</span></button>
+        <a class="icon-button" href="about.html#team"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 20.5c1.2-3.8 4.2-5.5 7.5-5.5s6.3 1.7 7.5 5.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>プロフィール</span></a>
+        <button type="button" class="icon-button" data-open="menu-panel" aria-controls="menu-panel" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>メニュー</span></button>
+      </div>
+    </div>
+    <nav class="tabs" aria-label="地域">
+      <ul class="tabs-inner">
+        <li><a href="index.html?area=all#new" data-area="all">新着</a></li>
+        <li><a href="index.html#feature">特集</a></li>
+        <li><a href="index.html#popular">人気</a></li>
+        <li><a href="index.html?genre=cafe#new" data-genre="cafe">カフェ</a></li>
+        <li><a href="index.html?area=naha#new" data-area="naha">那覇</a></li>
+        <li><a href="index.html?area=north#new" data-area="north">北部</a></li>
+        <li><a href="index.html?area=central#new" data-area="central">中部</a></li>
+        <li><a href="index.html?area=south#new" data-area="south">南部</a></li>
+        <li><a href="index.html#area">市町村から探す</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="panel" id="search-panel" hidden>
+    <div class="panel-inner container" role="dialog" aria-modal="true" aria-label="記事を探す">
+      <form class="search-form" action="index.html" method="get">
+        <label class="visually-hidden" for="search-input">キーワード</label>
+        <input id="search-input" class="search-input" type="search" name="q" placeholder="キーワードで探す（例：沖縄そば、北谷）" autocomplete="off">
+        <button type="submit" class="button button-primary">探す</button>
+      </form>
+      <p class="panel-label">地域から探す</p>
+      <ul class="panel-chips">
+        <li><a href="index.html?area=naha#new" data-area="naha">那覇</a></li>
+        <li><a href="index.html?area=north#new" data-area="north">北部</a></li>
+        <li><a href="index.html?area=central#new" data-area="central">中部</a></li>
+        <li><a href="index.html?area=south#new" data-area="south">南部</a></li>
+      </ul>
+      <button type="button" class="panel-close" data-close>閉じる</button>
+    </div>
+  </div>
+
+  <div class="panel panel--menu" id="menu-panel" hidden>
+    <nav class="panel-inner container" aria-label="メニュー">
+      <ul class="menu-list">
+        <li><a href="index.html?area=all#new" data-area="all">新着記事</a></li>
+        <li><a href="index.html#feature">特集</a></li>
+        <li><a href="index.html#popular">人気の記事</a></li>
+        <li><a href="index.html#area">地域から探す</a></li>
+        <li><a href="index.html#links">暮らしのお役立ちリンク</a></li>
+        <li><a href="index.html#weather">台風・大雨のとき</a></li>
+        <li><a href="about.html">運営者情報・お問い合わせ</a></li>
+        <li><a href="privacy.html">プライバシーポリシー</a></li>
+      </ul>
+      <button type="button" class="panel-close" data-close>閉じる</button>
+    </nav>
+  </div>
+  <main class="page">
+    <div class="container">
+      <h1>プライバシーポリシー</h1>
+
+      <h2>集めている情報</h2>
+      <p>このサイトでは、現在、お問い合わせフォームなどで個人情報を集めていません。アクセス解析ツールや広告も使っていません。</p>
+
+      <h2>外部サービスの利用</h2>
+      <ul>
+        <li><strong>GitHub Pages</strong>：このサイトはGitHub Pagesで公開しています。サイトを表示するとき、GitHubがアクセスの記録（IPアドレスなど）を扱うことがあります。</li>
+        <li><strong>Google Fonts</strong>：見出しの文字の表示にGoogle Fontsを使っています。表示のとき、お使いの端末からGoogleのサーバーに接続します。</li>
+        <li><strong>Wikimedia Commons</strong>：一部の写真は、Wikimedia Commons で公開されている写真を表示しています。表示のとき、お使いの端末からWikimediaのサーバーに接続します。</li>
+        <li><strong>Googleマップ</strong>：お店などの場所の案内に、Googleマップの地図を表示することがあります。地図を表示するとき、お使いの端末からGoogleのサーバーに接続します。</li>
+        <li><strong>X（旧Twitter）でシェア</strong>：「Xでシェア」ボタンを押すと、Xのページが開きます。Xでの情報の扱いは、Xのプライバシーポリシーに従います。</li>
+      </ul>
+
+      <h2>今後の変更</h2>
+      <p>アクセス解析やお問い合わせフォームなどを始めるときは、このページを更新してお知らせします。</p>
+
+      <p class="updated">2026年10月11日 制定</p>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-logo">うちなーくらし便り</p>
+      <nav class="footer-nav" aria-label="サイト情報">
+        <ul>
+          <li><a href="./">トップ</a></li>
+          <li><a href="about.html">運営者情報・お問い合わせ</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="about.html#disclaimer">免責事項</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">&copy; 2026 うちなーくらし便り</p>
+    </div>
+  </footer>
+  <script src="assets/js/main.js?v=8"></script>
+</body>
+</html>

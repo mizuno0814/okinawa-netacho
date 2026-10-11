@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>うちなーくらし便り｜沖縄の暮らしを、ちょっとお得に、もっと楽しく</title>
+  <meta name="description" content="沖縄に住む人のための、暮らしに役立つ前向きな情報サイト。お得な支援制度、地元の人が通うお店、おでかけ情報を、出典と確認日つきでお届けします。県外の沖縄好きの方も歓迎です。">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="うちなーくらし便り">
+  <meta property="og:title" content="うちなーくらし便り｜沖縄の暮らしを、ちょっとお得に、もっと楽しく">
+  <meta property="og:description" content="沖縄に住む人のための、暮らしに役立つ前向きな情報サイト。出典と確認日つきでお届けします。">
+  <!-- 公開URLが決まったら https://ravinala-oka.github.io/uchina-kurashi を置き換える（README.md 参照） -->
+  <link rel="canonical" href="https://ravinala-oka.github.io/uchina-kurashi/">
+  <meta property="og:url" content="https://ravinala-oka.github.io/uchina-kurashi/">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="https://ravinala-oka.github.io/uchina-kurashi/assets/img/ogp.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="うちなーくらし便り 沖縄の毎日を、ちょっとお得に、もっと楽しく。">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0a7ea4">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"うちなーくらし便り","alternateName":"沖縄の暮らし情報サイト うちなーくらし便り","url":"https://ravinala-oka.github.io/uchina-kurashi/","inLanguage":"ja"}</script>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=8">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="./" aria-label="うちなーくらし便り トップへ">
+        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="var(--sea)"/><circle cx="27" cy="13" r="5" fill="var(--sun)"/><path d="M4 25c4-3 8-3 12 0s8 3 12 0 6-3 8-1v6a16 16 0 0 1-32 0z" fill="#fff" opacity=".9"/></svg>
+        <span class="logo-text">うちなーくらし便り<small>沖縄の暮らし情報</small></span>
+      </a>
+      <div class="header-icons">
+        <button type="button" class="icon-button" data-open="search-panel" aria-controls="search-panel" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>探す</span></button>
+        <a class="icon-button" href="about.html#team"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 20.5c1.2-3.8 4.2-5.5 7.5-5.5s6.3 1.7 7.5 5.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>プロフィール</span></a>
+        <button type="button" class="icon-button" data-open="menu-panel" aria-controls="menu-panel" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>メニュー</span></button>
+      </div>
+    </div>
+    <nav class="tabs" aria-label="地域">
+      <ul class="tabs-inner">
+        <li><a href="#new" data-area="all">新着</a></li>
+        <li><a href="#feature">特集</a></li>
+        <li><a href="#popular">人気</a></li>
+        <li><a href="#new" data-genre="cafe">カフェ</a></li>
+        <li><a href="#new" data-area="naha">那覇</a></li>
+        <li><a href="#new" data-area="north">北部</a></li>
+        <li><a href="#new" data-area="central">中部</a></li>
+        <li><a href="#new" data-area="south">南部</a></li>
+        <li><a href="#area">市町村から探す</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="panel" id="search-panel" hidden>
+    <div class="panel-inner container" role="dialog" aria-modal="true" aria-label="記事を探す">
+      <form class="search-form" action="index.html" method="get">
+        <label class="visually-hidden" for="search-input">キーワード</label>
+        <input id="search-input" class="search-input" type="search" name="q" placeholder="キーワードで探す（例：沖縄そば、北谷）" autocomplete="off">
+        <button type="submit" class="button button-primary">探す</button>
+      </form>
+      <p class="panel-label">地域から探す</p>
+      <ul class="panel-chips">
+        <li><a href="#new" data-area="naha">那覇</a></li>
+        <li><a href="#new" data-area="north">北部</a></li>
+        <li><a href="#new" data-area="central">中部</a></li>
+        <li><a href="#new" data-area="south">南部</a></li>
+      </ul>
+      <button type="button" class="panel-close" data-close>閉じる</button>
+    </div>
+  </div>
+
+  <div class="panel panel--menu" id="menu-panel" hidden>
+    <nav class="panel-inner container" aria-label="メニュー">
+      <ul class="menu-list">
+        <li><a href="#new" data-area="all">新着記事</a></li>
+        <li><a href="#feature">特集</a></li>
+        <li><a href="#popular">人気の記事</a></li>
+        <li><a href="#area">地域から探す</a></li>
+        <li><a href="#links">暮らしのお役立ちリンク</a></li>
+        <li><a href="#weather">台風・大雨のとき</a></li>
+        <li><a href="about.html">運営者情報・お問い合わせ</a></li>
+        <li><a href="privacy.html">プライバシーポリシー</a></li>
+      </ul>
+      <button type="button" class="panel-close" data-close>閉じる</button>
+    </nav>
+  </div>
+
+  <main id="main">
+    <!-- 注目記事（スライド） -->
+    <section class="pickup" aria-label="注目の記事">
+      <div class="pickup-track" tabindex="0">
+        <article class="slide">
+          <div class="slide-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Kerama_Island_-_6081216280.jpg/960px-Kerama_Island_-_6081216280.jpg" alt="慶良間諸島の青い海と島" width="960" height="540"></div>
+          <div class="slide-body">
+            <p class="slide-label">近日公開</p>
+            <h2>今月使える！沖縄の市町村のお得な支援制度・無料イベントまとめ</h2>
+            <p class="meta"><span class="pin">北部・中部・南部・宮古・八重山</span><span>地域別に紹介</span></p>
+          </div>
+        </article>
+        <article class="slide">
+          <div class="slide-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Okinawa_soba_in_Yamabare.jpg/960px-Okinawa_soba_in_Yamabare.jpg" alt="沖縄そば" width="960" height="723"></div>
+          <div class="slide-body">
+            <p class="slide-label">近日公開</p>
+            <h2>地元の人が通う一杯を探して。沖縄そばマップ</h2>
+            <p class="meta"><span class="pin">北部・中部・南部・宮古・八重山</span><span>地域別に紹介</span></p>
+          </div>
+        </article>
+        <article class="slide">
+          <div class="slide-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Sunset_in_Okinawa_%2851924272929%29.jpg/960px-Sunset_in_Okinawa_%2851924272929%29.jpg" alt="沖縄の海に沈む夕日" width="960" height="640"></div>
+          <div class="slide-body">
+            <p class="slide-label">近日公開</p>
+            <h2>日の入り時刻つき 沖縄の夕日がきれいに見えるスポット</h2>
+            <p class="meta"><span class="pin">北部・中部・南部・宮古・八重山</span><span>地域別に紹介</span></p>
+          </div>
+        </article>
+      </div>
+      <div class="dots" role="tablist" aria-label="スライドの切り替え">
+        <button type="button" class="dot is-active" aria-label="1枚目" aria-selected="true"></button>
+        <button type="button" class="dot" aria-label="2枚目" aria-selected="false"></button>
+        <button type="button" class="dot" aria-label="3枚目" aria-selected="false"></button>
+      </div>
+    </section>
+
+    <!-- 新着記事 -->
+    <section id="new" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-en">New Topics</p>
+          <h2>新着記事</h2>
+        </div>
+        <div class="filter" role="group" aria-label="地域で絞り込む">
+          <button type="button" class="chip is-active" data-area="all" aria-pressed="true">すべて</button>
+          <button type="button" class="chip" data-area="naha" aria-pressed="false">那覇</button>
+          <button type="button" class="chip" data-area="north" aria-pressed="false">北部</button>
+          <button type="button" class="chip" data-area="central" aria-pressed="false">中部</button>
+          <button type="button" class="chip" data-area="south" aria-pressed="false">南部</button>
+        </div>
+
+        <ul class="posts">
+          <li class="post" data-areas="naha" data-genres="event">
+            <a class="post-link" href="articles/naha-chura-miku-street.html">
+              <div class="post-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Shureimon_%28Winuaijo%29_Gate_of_Shuri_Castle.JPG/960px-Shureimon_%28Winuaijo%29_Gate_of_Shuri_Castle.JPG" alt="" loading="lazy" width="960" height="720"><span class="badge badge--new">NEW</span></div>
+              <h3>初音ミクが首里へ！「CHURA MIKU STREET 2026」は11/1〜12/13 国際通りと首里をゆいレールでめぐろう</h3>
+              <p class="meta"><span class="pin">那覇・国際通り／首里</span><span>2026.10.11</span></p>
+            </a>
+          </li>
+          <li class="post" data-areas="miyako" data-genres="otoku">
+            <a class="post-link" href="articles/miyakojima-cashless.html">
+              <div class="post-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Aragusuku_Beach_in_Miyako_%2851924273449%29.jpg/960px-Aragusuku_Beach_in_Miyako_%2851924273449%29.jpg" alt="" loading="lazy" width="960" height="640"><span class="badge badge--new">NEW</span></div>
+              <h3>宮古島で支払いの最大25%が戻ってくる！PayPay・au PAY・d払いの還元キャンペーン（12/31まで）使い分けガイド</h3>
+              <p class="meta"><span class="pin">宮古・宮古島市</span><span>2026.10.11</span></p>
+            </a>
+          </li>
+          <li class="post" data-areas="north" data-genres="odekake">
+            <a class="post-link" href="articles/motobu-churaumi.html">
+              <div class="post-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Okinawa_Aquarium.jpg/960px-Okinawa_Aquarium.jpg" alt="" loading="lazy" width="960" height="641"><span class="badge badge--new">NEW</span></div>
+              <h3>本部町・海洋博公園の「沖縄美ら海水族館」 見どころとアクセス</h3>
+              <p class="meta"><span class="pin">北部・本部町</span><span>2026.10.11</span></p>
+            </a>
+          </li>
+          <li class="post" data-areas="central" data-genres="taiken">
+            <a class="post-link" href="articles/chatan-ravina.html">
+              <div class="post-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Chatan_Sunset_Beach_and_The_Beach_Tower_Okinawa.JPG/960px-Chatan_Sunset_Beach_and_The_Beach_Tower_Okinawa.JPG" alt="" loading="lazy" width="960" height="722"><span class="badge badge--new">NEW</span></div>
+              <h3>北谷・アメリカンビレッジで指輪づくり体験「RAVINA（ラビナ）」</h3>
+              <p class="meta"><span class="pin">中部・北谷町</span><span>2026.10.11</span></p>
+            </a>
+          </li>
+          <li class="post" data-areas="naha north central south miyako yaeyama">
+            <div class="post-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Kerama_Island_-_6081216280.jpg/960px-Kerama_Island_-_6081216280.jpg" alt="" loading="lazy" width="960" height="540"><span class="badge">近日公開</span></div>
+            <h3>今月使える！沖縄の市町村のお得な支援制度・無料イベントまとめ</h3>
+            <p class="meta"><span class="pin">北部・中部・南部・宮古・八重山</span><span>地域別に紹介</span></p>
+          </li>
+          <li class="post" data-areas="naha north central south miyako yaeyama">
+            <div class="post-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Okinawa_soba_in_Yamabare.jpg/960px-Okinawa_soba_in_Yamabare.jpg" alt="" loading="lazy" width="960" height="723"><span class="badge">近日公開</span></div>
+            <h3>地元の人が通う一杯を探して。沖縄そばマップ</h3>
+            <p class="meta"><span class="pin">北部・中部・南部・宮古・八重山</span><span>地域別に紹介</span></p>
+          </li>
+          <li class="post" data-areas="naha north central south miyako yaeyama">
+            <div class="post-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Okinawa_Ocean_Expo_Park_Emerald_Beach_hdsr_Vlux5_01.jpg/960px-Okinawa_Ocean_Expo_Park_Emerald_Beach_hdsr_Vlux5_01.jpg" alt="" loading="lazy" width="960" height="720"><span class="badge">近日公開</span></div>
+            <h3>車で行く人のための 公園・ビーチ駐車場マップ</h3>
+            <p class="meta"><span class="pin">北部・中部・南部・宮古・八重山</span><span>地域別に紹介</span></p>
+          </li>
+          <li class="post" data-areas="naha north central south miyako yaeyama">
+            <div class="post-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Sunset_in_Okinawa_%2851924272929%29.jpg/960px-Sunset_in_Okinawa_%2851924272929%29.jpg" alt="" loading="lazy" width="960" height="640"><span class="badge">近日公開</span></div>
+            <h3>日の入り時刻つき 沖縄の夕日がきれいに見えるスポット</h3>
+            <p class="meta"><span class="pin">北部・中部・南部・宮古・八重山</span><span>地域別に紹介</span></p>
+          </li>
+          <li class="post" data-areas="naha north central south miyako yaeyama" data-genres="cafe gourmet">
+            <div class="post-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Okinawa_soba_and_mixed_rice.jpg/960px-Okinawa_soba_and_mixed_rice.jpg" alt="" loading="lazy" width="960" height="720"><span class="badge">近日公開</span></div>
+            <h3>まちの食堂・喫茶 看板メニューの物語</h3>
+            <p class="meta"><span class="pin">北部・中部・南部・宮古・八重山</span><span>地域別に紹介</span></p>
+          </li>
+          <li class="post" data-areas="naha north central south miyako yaeyama">
+            <div class="post-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/2016-02-27_Shisa_in_Taketomi-jima_%E7%AB%B9%E5%AF%8C%E5%B3%B6%E3%81%AE%E3%82%B7%E3%83%BC%E3%82%B5%E3%83%BC_DSCF2887.jpg/960px-2016-02-27_Shisa_in_Taketomi-jima_%E7%AB%B9%E5%AF%8C%E5%B3%B6%E3%81%AE%E3%82%B7%E3%83%BC%E3%82%B5%E3%83%BC_DSCF2887.jpg" alt="" loading="lazy" width="960" height="640"><span class="badge">近日公開</span></div>
+            <h3>読めたら沖縄通？ 難読地名クイズ（由来つき）</h3>
+            <p class="meta"><span class="pin">北部・中部・南部・宮古・八重山</span><span>地域別に紹介</span></p>
+          </li>
+        </ul>
+        <p class="filter-empty" hidden>この条件の記事は準備中です。</p>
+      </div>
+    </section>
+
+    <!-- 特集 -->
+    <section id="feature" class="section section--beige">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-en">Feature</p>
+          <h2>特集</h2>
+        </div>
+
+        <article class="feature">
+          <header class="feature-head">
+            <p class="tags"><span>#特集</span><span>#北部</span><span>#週末おでかけ</span></p>
+            <h3>北部・本部半島へ、週末おでかけ</h3>
+            <p>海洋博公園の水族館や、ビーチ・公園の情報など。車で出かける週末にうれしい北部の話題を集めます。</p>
+          </header>
+          <ul class="mini-posts">
+            <li><a href="articles/motobu-churaumi.html"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Okinawa_Aquarium.jpg/960px-Okinawa_Aquarium.jpg" alt="" loading="lazy" width="960" height="641"><p>沖縄美ら海水族館 見どころとアクセス</p></a></li>
+            <li><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Okinawa_Ocean_Expo_Park_Emerald_Beach_hdsr_Vlux5_01.jpg/960px-Okinawa_Ocean_Expo_Park_Emerald_Beach_hdsr_Vlux5_01.jpg" alt="" loading="lazy" width="960" height="720"><p>公園・ビーチ駐車場マップ（近日公開）</p></li>
+          </ul>
+        </article>
+
+        <article class="feature">
+          <header class="feature-head">
+            <p class="tags"><span>#特集</span><span>#中部</span><span>#北谷</span></p>
+            <h3>中部・北谷の海辺で過ごす一日</h3>
+            <p>アメリカンビレッジのお店や、夕日のきれいな海辺。北谷の海沿いで楽しめる話題を集めます。</p>
+          </header>
+          <ul class="mini-posts">
+            <li><a href="articles/chatan-ravina.html"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Chatan_Sunset_Beach_and_The_Beach_Tower_Okinawa.JPG/960px-Chatan_Sunset_Beach_and_The_Beach_Tower_Okinawa.JPG" alt="" loading="lazy" width="960" height="722"><p>アメリカンビレッジで指輪づくり体験「RAVINA」</p></a></li>
+            <li><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Sunset_in_Okinawa_%2851924272929%29.jpg/960px-Sunset_in_Okinawa_%2851924272929%29.jpg" alt="" loading="lazy" width="960" height="640"><p>夕日がきれいに見えるスポット（近日公開）</p></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 人気 -->
+    <section id="popular" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-en">Popular</p>
+          <h2>人気の記事</h2>
+          <p class="section-lead">読まれた数の集計を始めたら、ここにランキングを表示します。いまは編集部のおすすめを紹介しています。</p>
+        </div>
+        <ul class="ranking">
+          <li><a href="articles/motobu-churaumi.html"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Okinawa_Aquarium.jpg/960px-Okinawa_Aquarium.jpg" alt="" loading="lazy" width="960" height="641"><span class="ranking-title">本部町・海洋博公園の「沖縄美ら海水族館」 見どころとアクセス</span><span class="meta"><span class="pin">北部・本部町</span></span></a></li>
+          <li><a href="articles/chatan-ravina.html"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Chatan_Sunset_Beach_and_The_Beach_Tower_Okinawa.JPG/960px-Chatan_Sunset_Beach_and_The_Beach_Tower_Okinawa.JPG" alt="" loading="lazy" width="960" height="722"><span class="ranking-title">北谷・アメリカンビレッジで指輪づくり体験「RAVINA（ラビナ）」</span><span class="meta"><span class="pin">中部・北谷町</span></span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 地域から探す -->
+    <section id="area" class="section section--beige">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-en">Area</p>
+          <h2>地域から探す</h2>
+          <p class="section-lead">沖縄を5つの地域に分けて紹介します。市町村名を押すと、各市町村の公式サイトが開きます。地域は暮らしの範囲（生活圏）で分けています。</p>
+        </div>
+        <div class="map-embed">
+          <iframe src="https://www.google.com/maps/d/embed?mid=1xUb_qe_X6psJ0Z2VInRp-qUlBjqI3Ys&amp;ll=26.4,127.8&amp;z=8" title="沖縄マップ（Googleマイマップ）" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+        <p class="map-link"><a href="https://www.google.com/maps/d/viewer?mid=1xUb_qe_X6psJ0Z2VInRp-qUlBjqI3Ys" target="_blank" rel="noopener">大きな地図で開く</a></p>
+        <div class="regions">
+          <article class="region" id="area-north">
+            <div class="region-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/View_of_the_East_China_Sea_from_Kunigami_Forest_Park_2018.JPG/960px-View_of_the_East_China_Sea_from_Kunigami_Forest_Park_2018.JPG" alt="国頭村から見た東シナ海" loading="lazy" width="960" height="720"></div>
+            <div class="region-body">
+              <h3>北部</h3>
+              <p>世界自然遺産のやんばるの森、本部半島の海、伊江島・伊平屋島・伊是名島の島々。自然の近くでの暮らしと、ゆったりした時間が魅力の地域です。</p>
+              <ul class="town-list">
+              <li><a href="https://www.city.nago.okinawa.jp/" target="_blank" rel="noopener">名護市</a></li>
+              <li><a href="https://www.vill.kunigami.okinawa.jp/" target="_blank" rel="noopener">国頭村</a></li>
+              <li><a href="https://www.vill.ogimi.okinawa.jp/" target="_blank" rel="noopener">大宜味村</a></li>
+              <li><a href="https://www.vill.higashi.okinawa.jp/" target="_blank" rel="noopener">東村</a></li>
+              <li><a href="https://www.nakijin.jp/" target="_blank" rel="noopener">今帰仁村</a></li>
+              <li><a href="https://www.town.motobu.okinawa.jp/" target="_blank" rel="noopener">本部町</a></li>
+              <li><a href="https://www.vill.onna.okinawa.jp/" target="_blank" rel="noopener">恩納村</a></li>
+              <li><a href="https://www.vill.ginoza.okinawa.jp/" target="_blank" rel="noopener">宜野座村</a></li>
+              <li><a href="https://www.town.kin.okinawa.jp/" target="_blank" rel="noopener">金武町</a></li>
+              <li><a href="https://www.iejima.org/" target="_blank" rel="noopener">伊江村</a></li>
+              <li><a href="https://www.vill.iheya.okinawa.jp/" target="_blank" rel="noopener">伊平屋村</a></li>
+              <li><a href="https://www.vill.izena.okinawa.jp/" target="_blank" rel="noopener">伊是名村</a></li>
+            </ul>
+              <a class="region-more" href="#new" data-area="north">北部の記事を見る</a>
+            </div>
+          </article>
+          <article class="region" id="area-central">
+            <div class="region-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Chatan_Sunset_Beach_and_The_Beach_Tower_Okinawa.JPG/960px-Chatan_Sunset_Beach_and_The_Beach_Tower_Okinawa.JPG" alt="北谷町のサンセットビーチ" loading="lazy" width="960" height="722"></div>
+            <div class="region-body">
+              <h3>中部</h3>
+              <p>宜野湾・沖縄市・うるま・読谷・北谷など。海沿いの街と、にぎやかな商業エリアがそろう地域です。</p>
+              <ul class="town-list">
+              <li><a href="https://www.city.ginowan.lg.jp/" target="_blank" rel="noopener">宜野湾市</a></li>
+              <li><a href="https://www.city.okinawa.okinawa.jp/" target="_blank" rel="noopener">沖縄市</a></li>
+              <li><a href="https://www.city.uruma.lg.jp/" target="_blank" rel="noopener">うるま市</a></li>
+              <li><a href="https://www.vill.yomitan.okinawa.jp/" target="_blank" rel="noopener">読谷村</a></li>
+              <li><a href="https://www.town.kadena.okinawa.jp/" target="_blank" rel="noopener">嘉手納町</a></li>
+              <li><a href="https://www.chatan.jp/" target="_blank" rel="noopener">北谷町</a></li>
+              <li><a href="https://www.vill.kitanakagusuku.lg.jp/" target="_blank" rel="noopener">北中城村</a></li>
+              <li><a href="https://www.vill.nakagusuku.okinawa.jp/" target="_blank" rel="noopener">中城村</a></li>
+              <li><a href="https://www.town.nishihara.okinawa.jp/" target="_blank" rel="noopener">西原町</a></li>
+            </ul>
+              <a class="region-more" href="#new" data-area="central">中部の記事を見る</a>
+            </div>
+          </article>
+          <article class="region" id="area-south">
+            <div class="region-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Kerama_Island_-_6081216280.jpg/960px-Kerama_Island_-_6081216280.jpg" alt="慶良間諸島の海と島" loading="lazy" width="960" height="540"></div>
+            <div class="region-body">
+              <h3>南部</h3>
+              <p>那覇・浦添の街なかから、南城・糸満の海辺、慶良間・久米島・大東の島々まで。暮らしの中心になる街が多い地域です。</p>
+              <ul class="town-list">
+              <li><a href="https://www.city.naha.okinawa.jp/" target="_blank" rel="noopener">那覇市</a></li>
+              <li><a href="https://www.city.urasoe.lg.jp/" target="_blank" rel="noopener">浦添市</a></li>
+              <li><a href="https://www.city.itoman.lg.jp/" target="_blank" rel="noopener">糸満市</a></li>
+              <li><a href="https://www.city.tomigusuku.lg.jp/" target="_blank" rel="noopener">豊見城市</a></li>
+              <li><a href="https://www.city.nanjo.okinawa.jp/" target="_blank" rel="noopener">南城市</a></li>
+              <li><a href="https://www.town.yonabaru.okinawa.jp/" target="_blank" rel="noopener">与那原町</a></li>
+              <li><a href="https://www.town.haebaru.lg.jp/" target="_blank" rel="noopener">南風原町</a></li>
+              <li><a href="https://www.town.yaese.lg.jp/" target="_blank" rel="noopener">八重瀬町</a></li>
+            </ul>
+            <p class="town-sub">南部の離島（慶良間・粟国・渡名喜・久米島・大東の島々）</p>
+            <ul class="town-list">
+              <li><a href="https://www.vill.tokashiki.okinawa.jp/" target="_blank" rel="noopener">渡嘉敷村</a></li>
+              <li><a href="https://www.vill.zamami.okinawa.jp/" target="_blank" rel="noopener">座間味村</a></li>
+              <li><a href="https://www.vill.aguni.okinawa.jp/" target="_blank" rel="noopener">粟国村</a></li>
+              <li><a href="http://www.vill.tonaki.okinawa.jp/" target="_blank" rel="noopener">渡名喜村</a></li>
+              <li><a href="https://www.town.kumejima.okinawa.jp/" target="_blank" rel="noopener">久米島町</a></li>
+              <li><a href="https://www.vill.minamidaito.okinawa.jp/" target="_blank" rel="noopener">南大東村</a></li>
+              <li><a href="https://vill.kitadaito.okinawa.jp/" target="_blank" rel="noopener">北大東村</a></li>
+            </ul>
+              <a class="region-more" href="#new" data-area="south">南部の記事を見る</a>
+            </div>
+          </article>
+          <article class="region" id="area-miyako">
+            <div class="region-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Aragusuku_Beach_in_Miyako_%2851924273449%29.jpg/960px-Aragusuku_Beach_in_Miyako_%2851924273449%29.jpg" alt="宮古島の新城海岸" loading="lazy" width="960" height="640"></div>
+            <div class="region-body">
+              <h3>宮古</h3>
+              <p>宮古島市と多良間村。透き通った海と、島ならではの行事や食文化がある地域です。</p>
+              <ul class="town-list">
+              <li><a href="https://www.city.miyakojima.lg.jp/" target="_blank" rel="noopener">宮古島市</a></li>
+              <li><a href="https://www.vill.tarama.okinawa.jp/" target="_blank" rel="noopener">多良間村</a></li>
+            </ul>
+              <a class="region-more" href="#new" data-area="miyako">宮古の記事を見る</a>
+            </div>
+          </article>
+          <article class="region" id="area-yaeyama">
+            <div class="region-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Kabira_Bay_Ishigaki_Island10o4592.jpg/960px-Kabira_Bay_Ishigaki_Island10o4592.jpg" alt="石垣島の川平湾" loading="lazy" width="960" height="639"></div>
+            <div class="region-body">
+              <h3>八重山</h3>
+              <p>石垣島、竹富町の島々（竹富島・西表島など）、与那国島。島ごとに個性のある文化と自然がある地域です。</p>
+              <ul class="town-list">
+              <li><a href="https://www.city.ishigaki.okinawa.jp/" target="_blank" rel="noopener">石垣市</a></li>
+              <li><a href="https://www.town.taketomi.lg.jp/" target="_blank" rel="noopener">竹富町</a></li>
+              <li><a href="https://www.town.yonaguni.okinawa.jp/" target="_blank" rel="noopener">与那国町</a></li>
+            </ul>
+              <a class="region-more" href="#new" data-area="yaeyama">八重山の記事を見る</a>
+            </div>
+          </article>
+        </div>
+        <p class="note">リンク先は2026年10月11日に開けることを確認しました。</p>
+      </div>
+    </section>
+
+    <!-- お役立ち -->
+    <section id="links" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-en">Useful Links</p>
+          <h2>暮らしのお役立ちリンク</h2>
+        </div>
+        <ul class="links">
+          <li><a href="https://www.pref.okinawa.jp/" target="_blank" rel="noopener"><span class="links-name">沖縄県公式ホームページ</span><span class="links-desc">県の制度や支援策、県全体のお知らせ</span></a></li>
+          <li><a href="https://www.yui-rail.co.jp/" target="_blank" rel="noopener"><span class="links-name">ゆいレール（沖縄都市モノレール）</span><span class="links-desc">運行情報やお得な乗車券</span></a></li>
+          <li><a href="https://www.busnavi-okinawa.com/" target="_blank" rel="noopener"><span class="links-name">バスなび沖縄</span><span class="links-desc">路線バスの経路と時刻を検索</span></a></li>
+        </ul>
+
+        <div id="weather" class="weather">
+          <div class="weather-text">
+            <h3>台風・大雨のときは</h3>
+            <p>沖縄周辺の風・雨・台風の動きは、地図で見られる「Windy」で確認できます。お出かけや備えの前にチェックしてください。</p>
+          </div>
+          <a class="button button-primary" href="https://www.windy.com/?26.196,127.726,5" target="_blank" rel="noopener">Windyで沖縄周辺を見る</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- お知らせ・フォロー -->
+    <section class="section section--beige">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-en">Information</p>
+          <h2>お知らせ</h2>
+        </div>
+        <ul class="news">
+          <li><span class="news-tag">お知らせ</span>「うちなーくらし便り」をはじめました。記事は順次公開していきます。</li>
+          <li><span class="news-tag">お知らせ</span>新しい記事は、XとInstagramでもお知らせする予定です（アカウントは準備中です）。</li>
+        </ul>
+        <div class="follow">
+          <p>このページをブックマークして、また見に来てください。</p>
+          <a class="button button-x" id="share-x" href="https://twitter.com/intent/tweet" target="_blank" rel="noopener">このサイトをXでシェア</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- タグライン -->
+    <section class="tagline">
+      <div class="container">
+        <p class="tagline-main">沖縄の毎日を、ちょっとお得に、もっと楽しく。</p>
+        <p>「うちなーくらし便り」は、沖縄に住む人のための暮らし情報サイトです。北部・中部・南部・宮古・八重山の地域ごとに、お得な制度、地元で愛されるお店、週末のおでかけ先を、出典と確認日つきでお届けします。（「うちなー」は沖縄のことばで「沖縄」のことです）</p>
+        <a class="text-link" href="about.html">編集部とサイトについて</a>
+      </div>
+    </section>
+
+    <!-- 写真のクレジット -->
+    <section class="credits">
+      <div class="container">
+        <details>
+          <summary>このページの写真について</summary>
+          <p>このページの写真は、Wikimedia Commons で公開されている写真を、それぞれのライセンスに従って使っています。写真は記事で紹介するお店や場所そのものとは限りません。</p>
+          <ul>
+            <li>国頭村から見た東シナ海：<a href="https://commons.wikimedia.org/wiki/File:View_of_the_East_China_Sea_from_Kunigami_Forest_Park_2018.JPG" target="_blank" rel="noopener">Kugel</a>（<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja" target="_blank" rel="noopener">CC BY-SA 4.0</a>）</li>
+            <li>沖縄そば：<a href="https://commons.wikimedia.org/wiki/File:Okinawa_soba_in_Yamabare.jpg" target="_blank" rel="noopener">Syced</a>（<a href="https://creativecommons.org/publicdomain/zero/1.0/deed.ja" target="_blank" rel="noopener">CC0</a>）</li>
+            <li>エメラルドビーチ：<a href="https://commons.wikimedia.org/wiki/File:Okinawa_Ocean_Expo_Park_Emerald_Beach_hdsr_Vlux5_01.jpg" target="_blank" rel="noopener">Hyppolyte de Saint-Rambert</a>（<a href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="_blank" rel="noopener">CC BY 4.0</a>）</li>
+            <li>沖縄の夕日：<a href="https://commons.wikimedia.org/wiki/File:Sunset_in_Okinawa_(51924272929).jpg" target="_blank" rel="noopener">Raita Futo from Tokyo, Japan</a>（<a href="https://creativecommons.org/licenses/by/2.0/deed.ja" target="_blank" rel="noopener">CC BY 2.0</a>）</li>
+            <li>沖縄そばとじゅーしー：<a href="https://commons.wikimedia.org/wiki/File:Okinawa_soba_and_mixed_rice.jpg" target="_blank" rel="noopener">Mokkie</a>（<a href="https://creativecommons.org/licenses/by-sa/3.0/deed.ja" target="_blank" rel="noopener">CC BY-SA 3.0</a>）</li>
+            <li>竹富島のシーサー：<a href="https://commons.wikimedia.org/wiki/File:2016-02-27_Shisa_in_Taketomi-jima_%E7%AB%B9%E5%AF%8C%E5%B3%B6%E3%81%AE%E3%82%B7%E3%83%BC%E3%82%B5%E3%83%BC_DSCF2887.jpg" target="_blank" rel="noopener">松岡明芳</a>（<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja" target="_blank" rel="noopener">CC BY-SA 4.0</a>）</li>
+            <li>北谷町のサンセットビーチ：<a href="https://commons.wikimedia.org/wiki/File:Chatan_Sunset_Beach_and_The_Beach_Tower_Okinawa.JPG" target="_blank" rel="noopener">そらみみ</a>（<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja" target="_blank" rel="noopener">CC BY-SA 4.0</a>）</li>
+            <li>宮古島の新城海岸：<a href="https://commons.wikimedia.org/wiki/File:Aragusuku_Beach_in_Miyako_(51924273449).jpg" target="_blank" rel="noopener">Raita Futo from Tokyo, Japan</a>（<a href="https://creativecommons.org/licenses/by/2.0/deed.ja" target="_blank" rel="noopener">CC BY 2.0</a>）</li>
+            <li>石垣島の川平湾：<a href="https://commons.wikimedia.org/wiki/File:Kabira_Bay_Ishigaki_Island10o4592.jpg" target="_blank" rel="noopener">663highland</a>（<a href="https://creativecommons.org/licenses/by/2.5/deed.ja" target="_blank" rel="noopener">CC BY 2.5</a>）</li>
+            <li>沖縄美ら海水族館「黒潮の海」：<a href="https://commons.wikimedia.org/wiki/File:Okinawa_Aquarium.jpg" target="_blank" rel="noopener">Jordy Meow</a>（<a href="https://creativecommons.org/licenses/by-sa/3.0/deed.ja" target="_blank" rel="noopener">CC BY-SA 3.0</a>）</li>
+            <li>首里城の守礼門：<a href="https://commons.wikimedia.org/wiki/File:Shureimon_(Winuaijo)_Gate_of_Shuri_Castle.JPG" target="_blank" rel="noopener">そらみみ</a>（<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja" target="_blank" rel="noopener">CC BY-SA 4.0</a>）</li>
+            <li>慶良間の海：<a href="https://commons.wikimedia.org/wiki/File:Kerama_Island_-_6081216280.jpg" target="_blank" rel="noopener">SteFou!</a>（<a href="https://creativecommons.org/licenses/by/2.0/deed.ja" target="_blank" rel="noopener">CC BY 2.0</a>）</li>
+          </ul>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-logo">うちなーくらし便り</p>
+      <p>掲載している情報は、各記事に書いた確認日時点の内容です。お出かけ前に公式情報もご確認ください。</p>
+      <nav class="footer-nav" aria-label="サイト情報">
+        <ul>
+          <li><a href="about.html">運営者情報・お問い合わせ</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="about.html#disclaimer">免責事項</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">&copy; <span id="year">2026</span> うちなーくらし便り</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js?v=8"></script>
+</body>
+</html>

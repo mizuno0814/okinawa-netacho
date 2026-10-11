@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ravinala-oka.github.io/uchina-kurashi/sitemap.xml
