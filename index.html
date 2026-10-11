@@ -25,7 +25,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=9">
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
@@ -246,12 +247,11 @@
         <div class="section-head">
           <p class="section-en">Area</p>
           <h2>地域から探す</h2>
-          <p class="section-lead">沖縄を5つの地域に分けて紹介します。市町村名を押すと、各市町村の公式サイトが開きます。地域は暮らしの範囲（生活圏）で分けています。</p>
+          <p class="section-lead">沖縄を5つの地域に分けて紹介します。地図のピンを押すと、その場所を紹介した記事が開きます。ボタンでカテゴリーごとに絞り込めます。市町村名を押すと、各市町村の公式サイトが開きます。地域は暮らしの範囲（生活圏）で分けています。</p>
         </div>
-        <div class="map-embed">
-          <iframe src="https://www.google.com/maps/d/embed?mid=1xUb_qe_X6psJ0Z2VInRp-qUlBjqI3Ys&amp;ll=26.4,127.8&amp;z=8" title="沖縄マップ（Googleマイマップ）" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-        </div>
-        <p class="map-link"><a href="https://www.google.com/maps/d/viewer?mid=1xUb_qe_X6psJ0Z2VInRp-qUlBjqI3Ys" target="_blank" rel="noopener">大きな地図で開く</a></p>
+        <div class="filter map-filter" id="map-filter" role="group" aria-label="地図のピンをカテゴリーで絞り込む"></div>
+        <div class="map-embed map-leaflet" id="area-map" role="region" aria-label="記事で紹介した場所の地図"></div>
+        <p class="map-link">スマホでは＋−ボタンで拡大・縮小できます。</p>
         <div class="regions">
           <article class="region" id="area-north">
             <div class="region-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/View_of_the_East_China_Sea_from_Kunigami_Forest_Park_2018.JPG/960px-View_of_the_East_China_Sea_from_Kunigami_Forest_Park_2018.JPG" alt="国頭村から見た東シナ海" loading="lazy" width="960" height="720"></div>
@@ -439,6 +439,8 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=8"></script>
+  <script src="assets/js/main.js?v=9"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="assets/js/map.js?v=9"></script>
 </body>
 </html>
