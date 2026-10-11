@@ -47,6 +47,15 @@
     link.addEventListener("click", function () { applyArea(link.getAttribute("data-area")); });
   });
 
+  // 「NEW」は公開した日（日本時間）だけ表示する。カードの日付（例：2026.10.12）で判断
+  var jst = new Date(Date.now() + 9 * 60 * 60 * 1000);
+  var today = jst.getUTCFullYear() + "." + ("0" + (jst.getUTCMonth() + 1)).slice(-2) + "." + ("0" + jst.getUTCDate()).slice(-2);
+  document.querySelectorAll(".badge--new, .slide-label").forEach(function (badge) {
+    var card = badge.closest("li, article, a");
+    var m = card && card.textContent.match(/\d{4}\.\d{2}\.\d{2}/);
+    if (!m || m[0] !== today) badge.remove();
+  });
+
   // 支援：地域で絞り込む（支援→地域、地域カード→支援 の両方から使う）
   var supportChips = document.querySelectorAll(".chip[data-support]");
   var supportPosts = document.querySelectorAll(".support-post");
