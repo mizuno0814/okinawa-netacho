@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
-  <link rel="stylesheet" href="assets/css/style.css?v=16">
+  <link rel="stylesheet" href="assets/css/style.css?v=17">
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
@@ -38,6 +38,7 @@
         <span class="logo-text">沖縄ネタ帳<small>沖縄の暮らし情報</small></span>
       </a>
       <div class="header-icons">
+        <a class="icon-button icon-button--life" href="lifetime.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="6" cy="6" r="1.8" fill="currentColor"/><circle cx="6" cy="12" r="1.8" fill="currentColor"/><circle cx="6" cy="18" r="1.8" fill="currentColor"/><path d="M10 6h10M10 12h8M10 18h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>一生涯の支援</span></a>
         <button type="button" class="icon-button" data-open="search-panel" aria-controls="search-panel" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>探す</span></button>
         <a class="icon-button" href="about.html#team"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 20.5c1.2-3.8 4.2-5.5 7.5-5.5s6.3 1.7 7.5 5.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>プロフィール</span></a>
         <button type="button" class="icon-button" data-open="menu-panel" aria-controls="menu-panel" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>メニュー</span></button>
@@ -48,7 +49,6 @@
         <li><a href="#new" data-area="all">新着</a></li>
         <li><a href="#popular">ランキング</a></li>
         <li><a href="#support" data-support="all">支援</a></li>
-        <li><a href="lifetime.html">一生の支援</a></li>
         <li><a href="#new" data-genre="cafe">カフェ</a></li>
         <li><a href="#new" data-area="naha">那覇</a></li>
         <li><a href="#new" data-area="north">北部</a></li>
@@ -83,7 +83,7 @@
         <li><a href="#new" data-area="all">新着記事</a></li>
         <li><a href="#popular">ランキング</a></li>
         <li><a href="#support" data-support="all">支援制度</a></li>
-        <li><a href="lifetime.html">一生の支援制度マップ</a></li>
+        <li><a href="lifetime.html">一生涯の支援</a></li>
         <li><a href="#area">地域から探す</a></li>
         <li><a href="#links">暮らしのお役立ちリンク</a></li>
         <li><a href="#weather">台風・大雨のとき</a></li>
@@ -240,7 +240,7 @@
         <div class="section-head">
           <p class="section-en">Support</p>
           <h2>支援</h2>
-          <p class="section-lead">市町村の支援制度（子育て・住まい・健康・移住など）を、地域ごとにまとめています。「全地域」は、どこに住んでいても受けられる支援を年齢順にまとめたページです。地域を選ぶと、その地域の記事だけが表示されます。毎月見直します。</p>
+          <p class="section-lead">市町村の支援制度（子育て・住まい・健康・移住など）を、地域ごとにまとめています。どこに住んでいても受けられる支援は、上の「一生涯の支援」に年齢順でまとめています。地域を選ぶと、その地域の記事だけが表示されます。毎月見直します。</p>
         </div>
         <div class="filter" role="group" aria-label="支援制度を地域で絞り込む">
           <button type="button" class="chip is-active" data-support="all" aria-pressed="true">すべて</button>
@@ -249,16 +249,8 @@
           <button type="button" class="chip" data-support="central" aria-pressed="false">中部</button>
           <button type="button" class="chip" data-support="south" aria-pressed="false">南部</button>
           <button type="button" class="chip" data-support="islands" aria-pressed="false">宮古・八重山</button>
-          <button type="button" class="chip" data-support="zenchiiki" aria-pressed="false">全地域</button>
         </div>
         <ul class="posts support-posts">
-          <li class="post support-post" data-support-areas="zenchiiki">
-            <a class="post-link" href="lifetime.html">
-              <div class="post-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/View_of_the_East_China_Sea_from_Kunigami_Forest_Park_2018.JPG/960px-View_of_the_East_China_Sea_from_Kunigami_Forest_Park_2018.JPG" alt="" loading="lazy" width="960" height="720"></div>
-              <h3>生まれる前から高齢期まで 一生のうちに受けられる支援制度マップ（年齢別）</h3>
-              <p class="meta"><span class="pin">全地域</span><span>2026.10.13</span></p>
-            </a>
-          </li>
           <li class="post support-post" data-support-areas="naha north central south islands">
             <a class="post-link" href="articles/support-pref-2026-10.html">
               <div class="post-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Okinawa_Prefectural_Government_Headquarters01ss3200.jpg/960px-Okinawa_Prefectural_Government_Headquarters01ss3200.jpg" alt="" loading="lazy" width="960" height="640"></div>
