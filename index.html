@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
-  <link rel="stylesheet" href="assets/css/style.css?v=15">
+  <link rel="stylesheet" href="assets/css/style.css?v=16">
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
@@ -151,6 +151,13 @@
 
         <ul class="posts">
           <li class="post" data-areas="naha north central south miyako yaeyama" data-genres="support">
+            <a class="post-link" href="articles/support-lifetime.html">
+              <div class="post-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/View_of_the_East_China_Sea_from_Kunigami_Forest_Park_2018.JPG/960px-View_of_the_East_China_Sea_from_Kunigami_Forest_Park_2018.JPG" alt="" loading="lazy" width="960" height="720"><span class="badge badge--new">NEW</span></div>
+              <h3>生まれる前から高齢期まで 一生のうちに受けられる支援制度マップ（年齢別）</h3>
+              <p class="meta"><span class="pin">全地域</span><span>2026.10.13</span></p>
+            </a>
+          </li>
+          <li class="post" data-areas="naha north central south miyako yaeyama" data-genres="support">
             <a class="post-link" href="articles/support-pref-2026-10.html">
               <div class="post-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Okinawa_Prefectural_Government_Headquarters01ss3200.jpg/960px-Okinawa_Prefectural_Government_Headquarters01ss3200.jpg" alt="" loading="lazy" width="960" height="640"><span class="badge badge--new">NEW</span></div>
               <h3>いま申し込める・使える沖縄県の支援制度（2026年10月版）｜ひとり親の暮らし応援・高校生の奨学給付金</h3>
@@ -238,7 +245,7 @@
         <div class="section-head">
           <p class="section-en">Support</p>
           <h2>支援</h2>
-          <p class="section-lead">市町村の支援制度（子育て・住まい・健康・移住など）を、地域ごとにまとめています。地域を選ぶと、その地域の記事だけが表示されます。毎月見直します。</p>
+          <p class="section-lead">市町村の支援制度（子育て・住まい・健康・移住など）を、地域ごとにまとめています。「全地域」は、どこに住んでいても受けられる支援を年齢順にまとめたページです。地域を選ぶと、その地域の記事だけが表示されます。毎月見直します。</p>
         </div>
         <div class="filter" role="group" aria-label="支援制度を地域で絞り込む">
           <button type="button" class="chip is-active" data-support="all" aria-pressed="true">すべて</button>
@@ -247,8 +254,16 @@
           <button type="button" class="chip" data-support="central" aria-pressed="false">中部</button>
           <button type="button" class="chip" data-support="south" aria-pressed="false">南部</button>
           <button type="button" class="chip" data-support="islands" aria-pressed="false">宮古・八重山</button>
+          <button type="button" class="chip" data-support="zenchiiki" aria-pressed="false">全地域</button>
         </div>
         <ul class="posts support-posts">
+          <li class="post support-post" data-support-areas="zenchiiki">
+            <a class="post-link" href="articles/support-lifetime.html">
+              <div class="post-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/View_of_the_East_China_Sea_from_Kunigami_Forest_Park_2018.JPG/960px-View_of_the_East_China_Sea_from_Kunigami_Forest_Park_2018.JPG" alt="" loading="lazy" width="960" height="720"></div>
+              <h3>生まれる前から高齢期まで 一生のうちに受けられる支援制度マップ（年齢別）</h3>
+              <p class="meta"><span class="pin">全地域</span><span>2026.10.13</span></p>
+            </a>
+          </li>
           <li class="post support-post" data-support-areas="naha north central south islands">
             <a class="post-link" href="articles/support-pref-2026-10.html">
               <div class="post-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Okinawa_Prefectural_Government_Headquarters01ss3200.jpg/960px-Okinawa_Prefectural_Government_Headquarters01ss3200.jpg" alt="" loading="lazy" width="960" height="640"></div>

@@ -435,3 +435,26 @@ body.no-scroll { overflow: hidden; }
 /* マイマップ上部の帯（地図名・作成者）を隠す：iframe を上にずらして枠の外に出す */
 .map-embed iframe { top: -62px; height: calc(100% + 62px); }
 .article-views { font-size: .75rem; color: var(--muted); }
+
+/* 生涯の支援制度マップ（年齢の縦線） */
+.life { list-style: none; margin: 24px 0 32px; padding: 0; position: relative; }
+.life::before { content: ""; position: absolute; left: 44px; top: 6px; bottom: 6px; width: 3px; background: var(--sea-light, #cde9f2); border-radius: 2px; }
+.life-stage { display: grid; grid-template-columns: 90px 1fr; gap: 0 16px; position: relative; margin-bottom: 22px; }
+.life-age {
+  position: relative; z-index: 1; align-self: start; justify-self: center;
+  min-width: 78px; padding: 6px 6px; border-radius: 999px; text-align: center;
+  background: var(--sea); color: #fff; font-weight: 800; font-size: .8rem; line-height: 1.3;
+}
+.life-body { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 14px; }
+.life-body h2 { margin: 0 0 8px; font-size: 1.05rem; border: 0; padding: 0; }
+.life-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.life-list li { display: flex; flex-direction: column; gap: 2px; padding-bottom: 10px; border-bottom: 1px dashed var(--line); }
+.life-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+.life-list strong { font-size: .95rem; }
+.life-list span { font-size: .88rem; line-height: 1.6; }
+.life-where { color: #b5522b; font-weight: 700; font-size: .82rem !important; }
+@media (max-width: 480px) {
+  .life::before { left: 30px; }
+  .life-stage { grid-template-columns: 62px 1fr; gap: 0 10px; }
+  .life-age { min-width: 58px; font-size: .72rem; }
+}
