@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
-  <link rel="stylesheet" href="assets/css/style.css?v=10">
+  <link rel="stylesheet" href="assets/css/style.css?v=13">
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
@@ -47,7 +47,7 @@
       <ul class="tabs-inner">
         <li><a href="#new" data-area="all">新着</a></li>
         <li><a href="#feature">特集</a></li>
-        <li><a href="#popular">人気</a></li>
+        <li><a href="#popular">ランキング</a></li>
         <li><a href="#support" data-support="all">支援</a></li>
         <li><a href="#new" data-genre="cafe">カフェ</a></li>
         <li><a href="#new" data-area="naha">那覇</a></li>
@@ -82,7 +82,7 @@
       <ul class="menu-list">
         <li><a href="#new" data-area="all">新着記事</a></li>
         <li><a href="#feature">特集</a></li>
-        <li><a href="#popular">人気の記事</a></li>
+        <li><a href="#popular">ランキング</a></li>
         <li><a href="#support" data-support="all">支援制度</a></li>
         <li><a href="#area">地域から探す</a></li>
         <li><a href="#links">暮らしのお役立ちリンク</a></li>
@@ -329,11 +329,11 @@
     <section id="popular" class="section">
       <div class="container">
         <div class="section-head">
-          <p class="section-en">Popular</p>
-          <h2>人気の記事</h2>
-          <p class="section-lead">読まれた数の集計を始めたら、ここにランキングを表示します。いまは編集部のおすすめを紹介しています。</p>
+          <p class="section-en">Ranking</p>
+          <h2>ランキング</h2>
+          <p class="section-lead" id="ranking-note">読まれた数の集計中です。数がたまるまでは編集部のおすすめを紹介しています。</p>
         </div>
-        <ul class="ranking">
+        <ul class="ranking" id="ranking-list">
           <li><a href="articles/naha-shurijo-guide.html"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Naha_Shuri_Castle02s5s3200.jpg/960px-Naha_Shuri_Castle02s5s3200.jpg" alt="" loading="lazy" width="960" height="640"><span class="ranking-title">首里城正殿 11/23公開 県民のための完全ガイド｜予約・年間パスポート・予約なしで楽しむ方法</span><span class="meta"><span class="pin">那覇・首里</span></span></a></li>
           <li><a href="articles/okinawa-soba-day-2026.html"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Okinawa_soba_in_Yamabare.jpg/960px-Okinawa_soba_in_Yamabare.jpg" alt="" loading="lazy" width="960" height="723"><span class="ranking-title">10/17は沖縄そばの日。17製麺所の袋麺が選べるフェスタと、32店のスタンプラリー（11/30まで）</span><span class="meta"><span class="pin">那覇・南部・中部・北部</span></span></a></li>
           <li><a href="articles/naha-chura-miku-street.html"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Shureimon_%28Winuaijo%29_Gate_of_Shuri_Castle.JPG/960px-Shureimon_%28Winuaijo%29_Gate_of_Shuri_Castle.JPG" alt="" loading="lazy" width="960" height="720"><span class="ranking-title">初音ミクが首里へ！「CHURA MIKU STREET 2026」は11/1〜12/13 国際通りと首里をゆいレールでめぐろう</span><span class="meta"><span class="pin">那覇・国際通り／首里</span></span></a></li>
@@ -547,5 +547,6 @@
   <script src="assets/js/main.js?v=11"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   <script src="assets/js/map.js?v=9"></script>
+  <script src="assets/js/stats.js?v=1" defer></script>
 </body>
 </html>

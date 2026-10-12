@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=8">
+  <link rel="stylesheet" href="assets/css/style.css?v=13">
 </head>
 <body>
   <header class="site-header">
@@ -30,7 +30,7 @@
       <ul class="tabs-inner">
         <li><a href="index.html?area=all#new" data-area="all">新着</a></li>
         <li><a href="index.html#feature">特集</a></li>
-        <li><a href="index.html#popular">人気</a></li>
+        <li><a href="index.html#popular">ランキング</a></li>
         <li><a href="index.html?genre=cafe#new" data-genre="cafe">カフェ</a></li>
         <li><a href="index.html?area=naha#new" data-area="naha">那覇</a></li>
         <li><a href="index.html?area=north#new" data-area="north">北部</a></li>
@@ -64,7 +64,7 @@
       <ul class="menu-list">
         <li><a href="index.html?area=all#new" data-area="all">新着記事</a></li>
         <li><a href="index.html#feature">特集</a></li>
-        <li><a href="index.html#popular">人気の記事</a></li>
+        <li><a href="index.html#popular">ランキング</a></li>
         <li><a href="index.html#area">地域から探す</a></li>
         <li><a href="index.html#links">暮らしのお役立ちリンク</a></li>
         <li><a href="index.html#weather">台風・大雨のとき</a></li>
@@ -79,12 +79,15 @@
       <h1>プライバシーポリシー</h1>
 
       <h2>集めている情報</h2>
-      <p>このサイトでは、現在、お問い合わせフォームなどで個人情報を集めていません。アクセス解析ツールや広告も使っていません。</p>
+      <p>このサイトでは、現在、お問い合わせフォームなどで個人情報を集めていません。広告も使っていません。</p>
+      <p><strong>訪問者数と記事の閲覧数</strong>：サイト上部の訪問者数と「ランキング」のために、日ごとの訪問者数と、記事ごとの閲覧数だけを数えています。名前やIPアドレスなど、個人を特定できる情報は保存しません。同じ端末からの数え過ぎを防ぐため、端末のブラウザ（localStorage）に「最後に数えた日付」だけを保存します。</p>
 
       <h2>外部サービスの利用</h2>
       <ul>
         <li><strong>GitHub Pages</strong>：このサイトはGitHub Pagesで公開しています。サイトを表示するとき、GitHubがアクセスの記録（IPアドレスなど）を扱うことがあります。</li>
         <li><strong>Google Fonts</strong>：見出しの文字の表示にGoogle Fontsを使っています。表示のとき、お使いの端末からGoogleのサーバーに接続します。</li>
+        <li><strong>Supabase</strong>：訪問者数と記事の閲覧数の保存に、Supabase（データの保存サービス）を使っています。数を送るとき、お使いの端末からSupabaseのサーバーに接続します。</li>
+        <li><strong>OpenStreetMap</strong>：TOPページの地図に、OpenStreetMapの地図を表示しています。表示のとき、お使いの端末からOpenStreetMapのサーバーに接続します。</li>
         <li><strong>Wikimedia Commons</strong>：一部の写真は、Wikimedia Commons で公開されている写真を表示しています。表示のとき、お使いの端末からWikimediaのサーバーに接続します。</li>
         <li><strong>Googleマップ</strong>：お店などの場所の案内に、Googleマップの地図を表示することがあります。地図を表示するとき、お使いの端末からGoogleのサーバーに接続します。</li>
         <li><strong>X（旧Twitter）でシェア</strong>：「Xでシェア」ボタンを押すと、Xのページが開きます。Xでの情報の扱いは、Xのプライバシーポリシーに従います。</li>
@@ -93,7 +96,7 @@
       <h2>今後の変更</h2>
       <p>アクセス解析やお問い合わせフォームなどを始めるときは、このページを更新してお知らせします。</p>
 
-      <p class="updated">2026年10月11日 制定</p>
+      <p class="updated">2026年10月11日 制定／2026年10月12日 改定（訪問者数・閲覧数の集計、地図の変更）</p>
     </div>
   </main>
   <footer class="site-footer">
@@ -111,5 +114,6 @@
     </div>
   </footer>
   <script src="assets/js/main.js?v=8"></script>
+  <script src="assets/js/stats.js?v=1" defer></script>
 </body>
 </html>

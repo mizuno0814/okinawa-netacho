@@ -436,6 +436,22 @@ body.no-scroll { overflow: hidden; }
 .ranking img { grid-row: span 2; width: 120px; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; }
 .ranking-title { font-weight: 700; font-size: .92rem; line-height: 1.6; }
 .ranking a:hover .ranking-title { color: var(--sea-dark); }
+/* 閲覧数で並べたときだけ順位の数字をつける */
+.ranking.is-ranked { counter-reset: rank; }
+.ranking.is-ranked li { counter-increment: rank; }
+.ranking.is-ranked a { position: relative; }
+.ranking.is-ranked a::before {
+  content: counter(rank); position: absolute; top: -6px; left: -6px; z-index: 1;
+  width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--sea); color: #fff; font-weight: 800; font-size: .9rem; box-shadow: 0 1px 3px rgba(0,0,0,.25);
+}
+.ranking.is-ranked li:nth-child(1) a::before { background: #d4a017; }
+.ranking.is-ranked li:nth-child(2) a::before { background: #9aa4ad; }
+.ranking.is-ranked li:nth-child(3) a::before { background: #b87333; }
+
+/* 一番上の訪問者数（小さく） */
+.visit-count { margin: 0; padding: 2px 12px; text-align: right; font-size: .68rem; line-height: 1.6; color: var(--muted); background: var(--beige); }
+.visit-count:empty { display: none; }
 
 /* マイマップ上部の帯（地図名・作成者）を隠す：iframe を上にずらして枠の外に出す */
 .map-embed iframe { top: -62px; height: calc(100% + 62px); }
