@@ -455,3 +455,4 @@ body.no-scroll { overflow: hidden; }
 
 /* マイマップ上部の帯（地図名・作成者）を隠す：iframe を上にずらして枠の外に出す */
 .map-embed iframe { top: -62px; height: calc(100% + 62px); }
+.article-views { font-size: .75rem; color: var(--muted); }

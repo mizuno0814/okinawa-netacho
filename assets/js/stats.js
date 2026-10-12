@@ -27,7 +27,19 @@
 
   // 記事ページなら、その記事の閲覧を数える
   var m = location.pathname.match(/\/articles\/([a-z0-9-]+)\.html$/);
-  if (m && firstToday("view:" + m[1])) rpc("track_view", { p_slug: m[1] }).catch(function () {});
+  if (m) {
+    var counted = firstToday("view:" + m[1]) ? rpc("track_view", { p_slug: m[1] }) : Promise.resolve();
+    // 記事の日付の横に、この記事を読んだ人の数を小さく表示する
+    var meta = document.querySelector(".article-meta");
+    counted.catch(function () {}).then(function () { return rpc("get_article_views", { p_slug: m[1] }); }).then(function (rows) {
+      var r = rows && rows[0];
+      if (!r || !meta) return;
+      var s = document.createElement("span");
+      s.className = "article-views";
+      s.textContent = "この記事を読んだ人 累計" + Number(r.total).toLocaleString("ja-JP") + "人／今日" + Number(r.today).toLocaleString("ja-JP") + "人";
+      meta.appendChild(s);
+    }).catch(function () {});
+  }
 
   // サイトの訪問を数えて、一番上に小さく表示する
   var bar = document.createElement("p");
