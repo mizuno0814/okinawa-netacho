@@ -26,7 +26,7 @@
   }
 
   // 記事ページなら、その記事の閲覧を数える
-  var m = location.pathname.match(/\/articles\/([a-z0-9-]+)\.html$/);
+  var m = location.pathname.match(/\/articles\/([a-z0-9-]+)\.html$/) || location.pathname.match(/\/(lifetime)\.html$/);
   if (m) {
     var counted = firstToday("view:" + m[1]) ? rpc("track_view", { p_slug: m[1] }) : Promise.resolve();
     // 記事の日付の横に、この記事を読んだ人の数を小さく表示する
@@ -36,7 +36,7 @@
       if (!r || !meta) return;
       var s = document.createElement("span");
       s.className = "article-views";
-      s.textContent = "この記事を読んだ人 累計" + Number(r.total).toLocaleString("ja-JP") + "人／今日" + Number(r.today).toLocaleString("ja-JP") + "人";
+      s.textContent = (m[1] === "lifetime" ? "このページを見た人" : "この記事を読んだ人") + " 累計" + Number(r.total).toLocaleString("ja-JP") + "人／今日" + Number(r.today).toLocaleString("ja-JP") + "人";
       meta.appendChild(s);
     }).catch(function () {});
   }
