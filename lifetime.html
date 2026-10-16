@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=19">
+  <link rel="stylesheet" href="assets/css/style.css?v=22">
 </head>
 <body>
   <header class="site-header">
@@ -94,12 +94,57 @@
       </nav>
 
       <p class="article-meta"><span class="pin">沖縄県内どこでも</span><span>2026年10月時点（毎年見直します）</span></p>
-      <h1>生まれる前から高齢期まで 一生のうちに受けられる支援制度マップ｜沖縄・年齢別（2026年版）</h1>
+      <h1>沖縄の一生涯の支援制度マップ（2026年版）</h1>
 
-      <figure class="article-hero">
-        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/%E3%83%95%E3%82%AF%E3%82%AE%E4%B8%A6%E6%9C%A8_20160121_-_panoramio.jpg/960px-%E3%83%95%E3%82%AF%E3%82%AE%E4%B8%A6%E6%9C%A8_20160121_-_panoramio.jpg" alt="国頭村から見た東シナ海" width="960" height="640">
-        <figcaption>写真はフクギ並木（イメージ）。写真：<a href="https://commons.wikimedia.org/wiki/File:%E3%83%95%E3%82%AF%E3%82%AE%E4%B8%A6%E6%9C%A8_20160121_-_panoramio.jpg" target="_blank" rel="noopener">690 Noda</a>／<a href="https://creativecommons.org/licenses/by/3.0/deed.ja" target="_blank" rel="noopener">CC BY 3.0</a></figcaption>
-      </figure>
+      <!-- 支援チェッカー（データは assets/js/benefits-data.js。入力内容は送信・保存しない） -->
+      <section class="checker" id="checker" aria-labelledby="checker-title">
+        <h2 id="checker-title">あなたが今受けられる国や町からの支援を調べる</h2>
+        <p class="checker-lead">年齢・家族・住んでいる市町村を選ぶと、いま申し込める・使える国・県・市町村の補助金や助成金を一覧にします。</p>
+        <form id="checker-form" class="checker-form">
+          <div class="checker-row">
+            <label class="checker-field"><span>住んでいる市町村</span>
+              <select id="checker-city" name="city" required><option value="">選んでください</option></select>
+            </label>
+            <label class="checker-field checker-field--age"><span>あなたの年齢</span>
+              <input type="number" name="age" min="0" max="120" inputmode="numeric" placeholder="例：35"><em>歳</em>
+            </label>
+          </div>
+          <fieldset class="checker-set">
+            <legend>子ども（いる年代すべて）</legend>
+            <label><input type="checkbox" value="kid0">0〜2歳</label>
+            <label><input type="checkbox" value="kid3">3〜5歳</label>
+            <label><input type="checkbox" value="elem">小学生</label>
+            <label><input type="checkbox" value="junior">中学生</label>
+            <label><input type="checkbox" value="high">高校生</label>
+            <label><input type="checkbox" value="univ">大学・専門学校</label>
+          </fieldset>
+          <fieldset class="checker-set">
+            <legend>家族・暮らし（当てはまるものすべて）</legend>
+            <label><input type="checkbox" value="pregnant">妊娠している</label>
+            <label><input type="checkbox" value="fertility">不妊治療・不育症の検査</label>
+            <label><input type="checkbox" value="newlywed">結婚したばかり</label>
+            <label><input type="checkbox" value="single">ひとり親</label>
+            <label><input type="checkbox" value="senior">65歳以上の家族がいる</label>
+            <label><input type="checkbox" value="disability">障がいがある（家族を含む）</label>
+            <label><input type="checkbox" value="illness">病気・けがで治療中</label>
+            <label><input type="checkbox" value="hardship">家賃・生活費に困っている</label>
+          </fieldset>
+          <fieldset class="checker-set">
+            <legend>住まい・仕事（当てはまるものすべて）</legend>
+            <label><input type="checkbox" value="reform">家のリフォーム</label>
+            <label><input type="checkbox" value="build">家を建てる・古い家の解体</label>
+            <label><input type="checkbox" value="solar">太陽光発電の設置</label>
+            <label><input type="checkbox" value="job">仕事探し・資格を取りたい</label>
+            <label><input type="checkbox" value="move">県外から移住（予定を含む）</label>
+          </fieldset>
+          <div class="checker-actions">
+            <button type="submit" class="button button-primary">調べる</button>
+            <button type="reset" class="checker-reset">入力をクリア</button>
+          </div>
+          <p class="checker-privacy">入力した内容は、このページの中だけで使います。どこにも送信・保存しません。</p>
+        </form>
+        <div id="checker-result" class="checker-result" aria-live="polite"></div>
+      </section>
 
       <p class="lead">沖縄に住んでいれば、どの市町村でも受けられる「当たり前の支援」を、年齢の順にまとめました。妊娠・出産から子育て、学校、仕事、病気、高齢期まで。それぞれ「どこで申し込むか」も書いています。金額は2026年10月時点の国・県の公式情報をもとにしています。市町村が独自に行っている支援は、地域別の支援のページで紹介しています。</p>
 
@@ -115,7 +160,7 @@
           <div class="life-age">出産</div>
           <div class="life-body">
             <h2>赤ちゃんが生まれたら</h2>
-            <ul class="life-list"><li><strong>出産育児一時金</strong><span>原則50万円（子ども1人につき）</span><span class="life-where">申し込み：会社の健康保険の方は加入している健康保険、国民健康保険の方は市町村の国保窓口</span></li><li><strong>妊婦のための支援給付（2回目）</strong><span>生まれた子ども1人につき5万円</span><span class="life-where">申し込み：市町村</span></li><li><strong>出産手当金・育児休業給付金</strong><span>働いている人が産休・育休中に受け取れるお金</span><span class="life-where">申し込み：勤め先（出産手当金は健康保険、育児休業給付金はハローワーク）</span></li></ul>
+            <ul class="life-list"><li><strong>出産育児一時金</strong><span>原則50万円（子ども1人につき）</span><span class="life-where">申し込み：会社の健康保険の方は加入している健康保険、国民健康保険の方は市町村の国保窓口</span></li><li><strong>妊婦のための支援給付（2回目）</strong><span>生まれた子ども1人につき5万円</span><span class="life-where">申し込み：市町村</span></li><li><strong>出産手当金・育児休業給付金</strong><span>働いている人が産休・育休中に受け取れる給付</span><span class="life-where">申し込み：勤め先（出産手当金は健康保険、育児休業給付金はハローワーク）</span></li></ul>
           </div>
         </li>
         <li class="life-stage">
@@ -226,6 +271,8 @@
     </div>
   </footer>
   <script src="assets/js/main.js?v=12"></script>
+  <script src="assets/js/benefits-data.js?v=2"></script>
+  <script src="assets/js/benefits.js?v=2"></script>
   <script src="assets/js/stats.js?v=3" defer></script>
 </body>
 </html>

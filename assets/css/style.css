@@ -514,3 +514,63 @@ body.no-scroll { overflow: hidden; }
   #new .post h3 { font-size: 1.05rem; }
   #new .hook { font-size: 1.1rem; padding: 6px 14px; left: 12px; bottom: 12px; }
 }
+
+/* 支援チェッカー（一生涯の支援ページの一番上） */
+.checker { margin: 20px 0 36px; padding: 20px 18px 22px; border: 2px solid var(--sea); border-radius: 14px; background: #f3f9fb; }
+.checker h2#checker-title { margin: 0; font-size: clamp(1.2rem, 4.2vw, 1.5rem); color: var(--sea-dark); }
+.checker-lead { margin: 8px 0 16px; font-size: .92rem; }
+.checker-row { display: flex; flex-wrap: wrap; gap: 12px 16px; }
+.checker-field { display: flex; flex-direction: column; gap: 4px; font-weight: 700; font-size: .9rem; flex: 1 1 200px; }
+.checker-field select, .checker-field input { font: inherit; font-weight: 400; font-size: 1rem; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: #fff; min-height: 44px; }
+.checker-field--age { flex: 0 1 160px; position: relative; }
+.checker-field--age input { padding-right: 36px; }
+.checker-field--age em { position: absolute; right: 12px; bottom: 11px; font-style: normal; font-weight: 400; color: var(--muted); }
+.checker-set { margin: 16px 0 0; padding: 0; border: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.checker-set legend { width: 100%; margin-bottom: 8px; padding: 0; font-weight: 700; font-size: .9rem; }
+.checker-set label { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; min-height: 40px; border: 1px solid var(--line); border-radius: 999px; background: #fff; font-size: .88rem; cursor: pointer; }
+.checker-set label:has(input:checked) { border-color: var(--sea); background: #e2f1f6; font-weight: 700; }
+.checker-set input { width: 18px; height: 18px; margin: 0; accent-color: var(--sea); }
+.checker-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 20px; }
+.checker-actions .button { min-width: 160px; font-size: 1rem; }
+.checker-reset { border: 0; background: none; color: var(--muted); text-decoration: underline; font: inherit; font-size: .88rem; cursor: pointer; }
+.checker-privacy { margin: 10px 0 0; font-size: .78rem; color: var(--muted); }
+.checker-result { scroll-margin-top: 90px; }
+.checker-result:not(:empty) { margin-top: 22px; padding-top: 18px; border-top: 1px dashed #b9d6df; }
+.checker-count { margin: 0; font-size: 1.05rem; }
+.checker-count strong { font-size: 1.4rem; color: var(--coral-dark); }
+.checker-msg { margin: 8px 0 0; color: var(--muted); }
+.checker-group { margin: 22px 0 10px; font-size: 1rem; color: var(--sea-dark); }
+.checker-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+@media (min-width: 768px) { .checker { padding: 26px 28px 28px; } .checker-list { grid-template-columns: repeat(2, 1fr); } }
+.checker-item { padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+.checker-level { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: .75rem; font-weight: 700; color: var(--muted); }
+.checker-tag { padding: 1px 8px; border-radius: 999px; font-size: .72rem; }
+.checker-tag--soon { background: var(--coral-dark); color: #fff; }
+.checker-tag--start { background: var(--sun); color: #4a3300; }
+.checker-item h3 { margin: 4px 0 0; font-size: 1rem; line-height: 1.5; }
+.checker-amount { margin: 6px 0 0; font-weight: 700; color: var(--coral-dark); font-size: .95rem; }
+.checker-dl { margin: 8px 0 0; font-size: .84rem; display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; }
+.checker-dl dt { color: var(--muted); font-weight: 700; }
+.checker-dl dd { margin: 0; }
+.checker-links { margin: 10px 0 0; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .85rem; font-weight: 700; }
+.checker-note { margin: 18px 0 0; font-size: .8rem; color: var(--muted); }
+
+/* 支援チェッカー：縦幅を詰める */
+.checker { margin: 14px 0 28px; padding: 14px 16px 16px; }
+@media (min-width: 768px) { .checker { padding: 16px 22px 18px; } }
+.checker h2#checker-title { font-size: clamp(1.05rem, 3.6vw, 1.25rem); padding-top: 0; padding-bottom: 0; }
+.checker-lead { margin: 4px 0 10px; font-size: .84rem; }
+.checker-row { gap: 8px 12px; }
+.checker-field { font-size: .82rem; gap: 2px; }
+.checker-field select, .checker-field input { padding: 6px 10px; min-height: 38px; font-size: .95rem; }
+.checker-field--age em { bottom: 8px; }
+.checker-set { margin-top: 10px; gap: 6px; }
+.checker-set legend { margin-bottom: 4px; font-size: .82rem; }
+.checker-set label { padding: 3px 10px; min-height: 32px; font-size: .82rem; gap: 4px; }
+.checker-set input { width: 15px; height: 15px; }
+.checker-actions { margin-top: 12px; gap: 10px; }
+.checker-actions .button { min-width: 140px; padding-top: 8px; padding-bottom: 8px; }
+.checker-privacy { margin-top: 6px; font-size: .74rem; }
+
+/* 一生涯の支援：題名をスマホでも1行に */
+@media (max-width: 600px) { .lifetime-page h1 { font-size: 4.3vw; } }
