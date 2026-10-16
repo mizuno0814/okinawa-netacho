@@ -46,7 +46,6 @@
     </div>
     <nav class="tabs" aria-label="地域">
       <ul class="tabs-inner">
-        <li><a href="#daily">デイリー</a></li>
         <li><a href="#new" data-area="all">新着</a></li>
         <li><a href="#popular">ランキング</a></li>
         <li><a href="#support" data-support="all">支援</a></li>
@@ -81,7 +80,6 @@
   <div class="panel panel--menu" id="menu-panel" hidden>
     <nav class="panel-inner container" aria-label="メニュー">
       <ul class="menu-list">
-        <li><a href="#daily">デイリー（今日・今週末の沖縄）</a></li>
         <li><a href="#new" data-area="all">新着記事</a></li>
         <li><a href="#popular">ランキング</a></li>
         <li><a href="#support" data-support="all">支援制度</a></li>
@@ -97,56 +95,12 @@
   </div>
 
   <main id="main">
-    <!-- 注目記事（スライド） -->
-    <section class="pickup" aria-label="注目の記事">
-      <div class="pickup-track" tabindex="0">
-        <article class="slide">
-          <a class="post-link" href="articles/naha-shurijo-guide.html">
-            <div class="slide-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Naha_Okinawa_Japan_Shuri-Castle-02.jpg/960px-Naha_Okinawa_Japan_Shuri-Castle-02.jpg" alt="" width="960" height="600"><span class="hook">11/23 正殿公開</span></div>
-            <div class="slide-body">
-              <p class="slide-label">NEW</p>
-              <h2>首里城正殿 11/23公開 県民のための完全ガイド｜予約・年間パスポート・予約なしで楽しむ方法</h2>
-              <p class="meta"><span class="pin">那覇・首里</span><span>2026.10.11</span></p>
-            </div>
-          </a>
-        </article>
-        <article class="slide" data-expires="2026-11-30">
-          <a class="post-link" href="articles/okinawa-soba-day-2026.html">
-            <div class="slide-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Soki_soba_in_Naha.jpg/960px-Soki_soba_in_Naha.jpg" alt="" width="960" height="720"><span class="hook">10/17 そばの日</span></div>
-            <div class="slide-body">
-              <p class="slide-label">NEW</p>
-              <h2>10/17は沖縄そばの日。17製麺所の袋麺が選べるフェスタと、32店のスタンプラリー（11/30まで）</h2>
-              <p class="meta"><span class="pin">那覇・南部・中部・北部</span><span>2026.10.11</span></p>
-            </div>
-          </a>
-        </article>
-        <article class="slide" data-expires="2026-12-13">
-          <a class="post-link" href="articles/naha-chura-miku-street.html">
-            <div class="slide-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Night_at_Kokusai-dori_20250503182722.jpg/960px-Night_at_Kokusai-dori_20250503182722.jpg" alt="" width="960" height="640"><span class="hook">11/1スタート</span></div>
-            <div class="slide-body">
-              <p class="slide-label">NEW</p>
-              <h2>初音ミクが首里へ！「CHURA MIKU STREET 2026」は11/1〜12/13 国際通りと首里をゆいレールでめぐろう</h2>
-              <p class="meta"><span class="pin">那覇・国際通り／首里</span><span>2026.10.11</span></p>
-            </div>
-          </a>
-        </article>
-      </div>
-      <div class="dots" role="tablist" aria-label="スライドの切り替え">
-        <button type="button" class="dot is-active" aria-label="1枚目" aria-selected="true"></button>
-        <button type="button" class="dot" aria-label="2枚目" aria-selected="false"></button>
-        <button type="button" class="dot" aria-label="3枚目" aria-selected="false"></button>
-      </div>
-    </section>
-
-    <!-- デイリー記事（1日1話題。カードに data-publish＝公開日、data-expires＝表示する最後の日 をつける。新しい順に上へ足す） -->
-    <section id="daily" class="section section--daily">
+    <!-- 新着記事 -->
+    <section id="new" class="section">
       <div class="container">
-        <div class="section-head">
-          <p class="section-en">Daily</p>
-          <h2>デイリー（今日・今週末の沖縄）</h2>
-          <p class="section-lead">今日行ける・今週末に楽しめる沖縄の話題を、1日1つ、1分で読める短さで紹介します。期間が終わった話題は自動で消えます。</p>
-        </div>
-        <ul class="posts daily-posts">
+
+        <ul class="posts">
+          <!-- 新着とデイリーを1つにまとめた一覧。新しい順に上へ足す。デイリーは data-publish（公開日）と data-expires（表示する最後の日）をつける -->
           <li class="post" data-areas="central" data-genres="daily event" data-publish="2026-10-17" data-expires="2026-10-18">
             <a class="post-link" href="articles/daily-2026-10-17-urasoe-tedako.html">
               <div class="post-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/2007_Nagaoka_Festival_004.jpg/960px-2007_Nagaoka_Festival_004.jpg" alt="" loading="lazy" width="960" height="720"><span class="hook">花火19:50ごろ</span><span class="badge badge--daily">デイリー</span></div>
@@ -154,28 +108,6 @@
               <p class="meta"><span class="pin">中部・浦添市</span><span>2026.10.17</span></p>
             </a>
           </li>
-          <!-- DAILY-CARDS -->
-        </ul>
-        <p class="daily-empty" hidden>今日のデイリーは準備中です。</p>
-      </div>
-    </section>
-
-    <!-- 新着記事 -->
-    <section id="new" class="section">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-en">New Topics</p>
-          <h2>新着記事</h2>
-        </div>
-        <div class="filter" role="group" aria-label="地域で絞り込む">
-          <button type="button" class="chip is-active" data-area="all" aria-pressed="true">すべて</button>
-          <button type="button" class="chip" data-area="naha" aria-pressed="false">那覇</button>
-          <button type="button" class="chip" data-area="north" aria-pressed="false">北部</button>
-          <button type="button" class="chip" data-area="central" aria-pressed="false">中部</button>
-          <button type="button" class="chip" data-area="south" aria-pressed="false">南部</button>
-        </div>
-
-        <ul class="posts">
           <li class="post" data-areas="naha north central south miyako yaeyama" data-genres="support">
             <a class="post-link" href="articles/support-pref-2026-10.html">
               <div class="post-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Onna_Okinawa_Japan_Cape-Manzamo-01.jpg/960px-Onna_Okinawa_Japan_Cape-Manzamo-01.jpg" alt="" loading="lazy" width="960" height="640"><span class="hook">不妊治療 最大7万円</span><span class="badge badge--new">NEW</span></div>

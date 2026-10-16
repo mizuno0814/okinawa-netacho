@@ -497,3 +497,20 @@ body.no-scroll { overflow: hidden; }
 .daily-posts .post-img { aspect-ratio: 16 / 9; }
 .daily-empty { margin-top: 16px; color: var(--muted); font-size: .9rem; }
 .badge--daily { color: #4a3300; background: var(--sun); }
+
+/* 新着・デイリーの一覧：パソコン・タブレットは3列、スマホは1列で写真を大きく */
+#new .container { max-width: 1240px; }
+#new .posts { grid-template-columns: 1fr; gap: 28px; }
+#new .post-img { border-radius: 10px; }
+#new .post h3 { font-size: 1rem; margin-top: 10px; }
+#new .hook { font-size: 1.05rem; padding: 5px 12px; left: 10px; bottom: 10px; }
+#new .badge { font-size: .78rem; padding: 2px 10px; left: 10px; top: 10px; }
+@media (min-width: 600px) {
+  #new .posts { grid-template-columns: repeat(3, 1fr); gap: 32px 20px; }
+  #new .hook { font-size: .95rem; padding: 4px 10px; left: 8px; bottom: 8px; }
+}
+@media (min-width: 1024px) {
+  #new .posts { gap: 40px 28px; }
+  #new .post h3 { font-size: 1.05rem; }
+  #new .hook { font-size: 1.1rem; padding: 6px 14px; left: 12px; bottom: 12px; }
+}
