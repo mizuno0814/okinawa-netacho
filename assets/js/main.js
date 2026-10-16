@@ -5,6 +5,12 @@
   document.querySelectorAll("[data-expires]").forEach(function (el) {
     if (el.getAttribute("data-expires") < todayIso) el.remove();
   });
+  // 公開日（data-publish）より前のカードはまだ出さない
+  document.querySelectorAll("[data-publish]").forEach(function (el) {
+    if (el.getAttribute("data-publish") > todayIso) el.remove();
+  });
+  var dailyEmpty = document.querySelector(".daily-empty");
+  if (dailyEmpty) dailyEmpty.hidden = document.querySelectorAll(".daily-posts .post").length > 0;
   var dotsBox = document.querySelector(".dots");
   if (dotsBox) {
     var slideCount = document.querySelectorAll(".slide").length;

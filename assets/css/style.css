@@ -491,3 +491,9 @@ body.no-scroll { overflow: hidden; }
   .life-stage { grid-template-columns: 62px 1fr; gap: 0 10px; }
   .life-age { min-width: 58px; font-size: .72rem; }
 }
+
+/* デイリー（今日・今週末の沖縄） */
+.section--daily { background: linear-gradient(180deg, #fff8e8 0%, #fff 100%); }
+.daily-posts .post-img { aspect-ratio: 16 / 9; }
+.daily-empty { margin-top: 16px; color: var(--muted); font-size: .9rem; }
+.badge--daily { color: #4a3300; background: var(--sun); }

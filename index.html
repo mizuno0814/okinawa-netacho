@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
-  <link rel="stylesheet" href="assets/css/style.css?v=18">
+  <link rel="stylesheet" href="assets/css/style.css?v=19">
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
@@ -46,6 +46,7 @@
     </div>
     <nav class="tabs" aria-label="地域">
       <ul class="tabs-inner">
+        <li><a href="#daily">デイリー</a></li>
         <li><a href="#new" data-area="all">新着</a></li>
         <li><a href="#popular">ランキング</a></li>
         <li><a href="#support" data-support="all">支援</a></li>
@@ -80,6 +81,7 @@
   <div class="panel panel--menu" id="menu-panel" hidden>
     <nav class="panel-inner container" aria-label="メニュー">
       <ul class="menu-list">
+        <li><a href="#daily">デイリー（今日・今週末の沖縄）</a></li>
         <li><a href="#new" data-area="all">新着記事</a></li>
         <li><a href="#popular">ランキング</a></li>
         <li><a href="#support" data-support="all">支援制度</a></li>
@@ -133,6 +135,28 @@
         <button type="button" class="dot is-active" aria-label="1枚目" aria-selected="true"></button>
         <button type="button" class="dot" aria-label="2枚目" aria-selected="false"></button>
         <button type="button" class="dot" aria-label="3枚目" aria-selected="false"></button>
+      </div>
+    </section>
+
+    <!-- デイリー記事（1日1話題。カードに data-publish＝公開日、data-expires＝表示する最後の日 をつける。新しい順に上へ足す） -->
+    <section id="daily" class="section section--daily">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-en">Daily</p>
+          <h2>デイリー（今日・今週末の沖縄）</h2>
+          <p class="section-lead">今日行ける・今週末に楽しめる沖縄の話題を、1日1つ、1分で読める短さで紹介します。期間が終わった話題は自動で消えます。</p>
+        </div>
+        <ul class="posts daily-posts">
+          <li class="post" data-areas="central" data-genres="daily event" data-publish="2026-10-17" data-expires="2026-10-18">
+            <a class="post-link" href="articles/daily-2026-10-17-urasoe-tedako.html">
+              <div class="post-img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/2007_Nagaoka_Festival_004.jpg/960px-2007_Nagaoka_Festival_004.jpg" alt="" loading="lazy" width="960" height="720"><span class="hook">花火19:50ごろ</span><span class="badge badge--daily">デイリー</span></div>
+              <h3>10/17・18は浦添てだこまつり。夜は両日花火</h3>
+              <p class="meta"><span class="pin">中部・浦添市</span><span>2026.10.17</span></p>
+            </a>
+          </li>
+          <!-- DAILY-CARDS -->
+        </ul>
+        <p class="daily-empty" hidden>今日のデイリーは準備中です。</p>
       </div>
     </section>
 
