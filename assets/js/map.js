@@ -1,6 +1,7 @@
 (function () {
   // 「地域から探す」の地図（OpenStreetMap＋Leaflet）
   // 記事を公開したら、ここに場所を1件ずつ足す。cat は下の CATS のどれか。
+  // 期間のある記事は expires（その日まで表示）をつける。過ぎたピンは表示せず、毎日の自動削除で消える。
   var CATS = {
     gourmet: { label: "グルメ", color: "#e0703a" },
     event: { label: "イベント", color: "#c2417a" },
@@ -10,12 +11,15 @@
 
   var PINS = [
     { name: "首里城", cat: "history", lat: 26.2170, lng: 127.7194, title: "首里城正殿 11/23公開 県民のための完全ガイド", url: "articles/naha-shurijo-guide.html" },
-    { name: "那覇中央郵便局（沖縄そばの日フェスタ会場）", cat: "event", lat: 26.2051, lng: 127.6794, title: "10/17は沖縄そばの日。フェスタとスタンプラリー", url: "articles/okinawa-soba-day-2026.html" },
-    { name: "国際通り", cat: "event", lat: 26.2172, lng: 127.6910, title: "初音ミクが首里へ！「CHURA MIKU STREET 2026」", url: "articles/naha-chura-miku-street.html" },
-    { name: "瀬長島", cat: "scenery", lat: 26.1755, lng: 127.6427, title: "冬の沖縄の夕日は東京より約70分遅い", url: "articles/okinawa-sunset-calendar-2026.html" },
-    { name: "北谷公園サンセットビーチ", cat: "scenery", lat: 26.3132, lng: 127.7551, title: "冬の沖縄の夕日は東京より約70分遅い", url: "articles/okinawa-sunset-calendar-2026.html" },
-    { name: "残波岬", cat: "scenery", lat: 26.4405, lng: 127.7119, title: "冬の沖縄の夕日は東京より約70分遅い", url: "articles/okinawa-sunset-calendar-2026.html" }
+    { name: "那覇中央郵便局（沖縄そばの日フェスタ会場）", cat: "event", lat: 26.2051, lng: 127.6794, title: "10/17は沖縄そばの日。フェスタとスタンプラリー", url: "articles/okinawa-soba-day-2026.html", expires: "2026-11-30" },
+    { name: "国際通り", cat: "event", lat: 26.2172, lng: 127.6910, title: "初音ミクが首里へ！「CHURA MIKU STREET 2026」", url: "articles/naha-chura-miku-street.html", expires: "2026-12-13" },
+    { name: "瀬長島", cat: "scenery", lat: 26.1755, lng: 127.6427, title: "冬の沖縄の夕日は東京より約70分遅い", url: "articles/okinawa-sunset-calendar-2026.html", expires: "2026-12-31" },
+    { name: "北谷公園サンセットビーチ", cat: "scenery", lat: 26.3132, lng: 127.7551, title: "冬の沖縄の夕日は東京より約70分遅い", url: "articles/okinawa-sunset-calendar-2026.html", expires: "2026-12-31" },
+    { name: "残波岬", cat: "scenery", lat: 26.4405, lng: 127.7119, title: "冬の沖縄の夕日は東京より約70分遅い", url: "articles/okinawa-sunset-calendar-2026.html", expires: "2026-12-31" }
   ];
+
+  var todayIso = new Date(Date.now() + 9 * 60 * 60 * 1000).toISOString().slice(0, 10);
+  PINS = PINS.filter(function (p) { return !p.expires || p.expires >= todayIso; });
 
   var el = document.getElementById("area-map");
   if (!el || typeof L === "undefined") return;

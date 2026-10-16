@@ -1,0 +1,40 @@
+# 期間が終わった記事を毎日自動で削除する（日本時間 0:10 ごろ。GitHub の混雑で数十分〜数時間遅れることがある）
+name: 期限切れ記事の削除
+
+on:
+  schedule:
+    - cron: "10 15 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: expire-articles
+  cancel-in-progress: false
+
+jobs:
+  expire:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 期限切れの記事を削除
+        id: run
+        run: |
+          python .github/scripts/expire_articles.py | tee result.txt
+          echo "deleted=$(grep '^削除した記事:' result.txt | sed 's/^削除した記事: //')" >> "$GITHUB_OUTPUT"
+      - name: 変更をコミット
+        run: |
+          rm -f result.txt
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "削除する記事はありません"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "期限切れの記事を自動削除：${{ steps.run.outputs.deleted }}"
+          git push

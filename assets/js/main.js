@@ -1,4 +1,16 @@
 (function () {
+  // 期間が終わった記事のカードは、自動削除（毎日0時すぎ）を待たずに隠す。data-expires はその日まで表示
+  var jstNow = new Date(Date.now() + 9 * 60 * 60 * 1000);
+  var todayIso = jstNow.toISOString().slice(0, 10);
+  document.querySelectorAll("[data-expires]").forEach(function (el) {
+    if (el.getAttribute("data-expires") < todayIso) el.remove();
+  });
+  var dotsBox = document.querySelector(".dots");
+  if (dotsBox) {
+    var slideCount = document.querySelectorAll(".slide").length;
+    Array.prototype.slice.call(dotsBox.querySelectorAll(".dot"), slideCount).forEach(function (d) { d.remove(); });
+  }
+
   // 記事カードの地域絞り込み
   var chips = document.querySelectorAll(".chip[data-area]");
   var posts = document.querySelectorAll("#new .post");
