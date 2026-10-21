@@ -19,7 +19,8 @@
     { name: "首里金城町石畳道（那覇まちま～い）", cat: "history", lat: 26.2153, lng: 127.7148, title: "ガイドと歩く「那覇まちま～い」16コース", url: "articles/naha-machimai-2026.html", expires: "2027-03-31" },
     { name: "識名園（那覇まちま～い）", cat: "history", lat: 26.2041, lng: 127.7157, title: "ガイドと歩く「那覇まちま～い」16コース", url: "articles/naha-machimai-2026.html", expires: "2027-03-31" },
     { name: "第一牧志公設市場（那覇まちま～い）", cat: "history", lat: 26.2145, lng: 127.6883, title: "ガイドと歩く「那覇まちま～い」16コース", url: "articles/naha-machimai-2026.html", expires: "2027-03-31" },
-    { name: "伊良部島（サシバの飛来数調査）", cat: "scenery", lat: 24.8344, lng: 125.1867, title: "沖縄の秋の合図は「ミーニシ」とサシバ", url: "articles/okinawa-mi-nishi-sashiba.html" }
+    { name: "伊良部島（サシバの飛来数調査）", cat: "scenery", lat: 24.8344, lng: 125.1867, title: "沖縄の秋の合図は「ミーニシ」とサシバ", url: "articles/okinawa-mi-nishi-sashiba.html" },
+    { name: "沖縄県立博物館・美術館", cat: "history", lat: 26.2272, lng: 127.6937, title: "県内の小中学生と70歳以上は常設展が無料。おきみゅーは金・土なら夜8時まで", url: "articles/naha-okimu-free-night.html" }
   ];
 
   var todayIso = new Date(Date.now() + 9 * 60 * 60 * 1000).toISOString().slice(0, 10);
